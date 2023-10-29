@@ -11,14 +11,13 @@
             }
 
             function reboot() {                
-                $.getJSON('commands.php?cmd=reboot', function(data) {
-                    console.log(data); 
-                });
+                $.getJSON('commands.php?cmd=reboot');                ;
             }
 
             function update() {
-                $.getJSON('commands.php?cmd=update', function(data) {
-                    console.log(data); 
+                $.getJSON('commands.php?cmd=update')
+                .done(function(data) {
+                    document.location.reload();
                 });                
             }
         </script>
