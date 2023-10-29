@@ -14,7 +14,7 @@
             }
         </script>
     </head>
-    <body style="font-family: tahoma">        
+    <body style="font-family: tahoma; user-select: none">        
         <a onclick="exterminate()" href="#">Exterminate</a>        
         <br><br><br>
         <a onclick="reboot()" href="#">Reboot</a>        
