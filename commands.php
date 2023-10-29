@@ -15,8 +15,8 @@ switch($cmd) {
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);
-        $chkfile="/var/www/html/qdalek/tmp/".$chk.".wav";
-        $retfile="tmp/".$chk.".wav";
+        $chkfile="/var/www/html/qdalek/speech/".$chk.".wav";
+        $retfile="speech/".$chk.".wav";
 
         if (file_exists($chkfile)) {
             
