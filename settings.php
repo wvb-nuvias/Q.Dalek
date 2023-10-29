@@ -61,7 +61,7 @@
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="decreasevolume()" class="rounded-md bg-gray-400">
+            <button onclick="increasevolume()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume +</div>
@@ -73,7 +73,7 @@
                     <div class="h-1/5 <?=$textsize?>">Mute</div>
                 </div>
             </button>
-            <button onclick="increasevolume()" class="rounded-md bg-red-400">
+            <button onclick="decreasevolume()" class="rounded-md bg-red-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="increasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume -</div>
