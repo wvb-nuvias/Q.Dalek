@@ -25,6 +25,7 @@
         <?php
             //TODO get the texts from the database, add way to add and delete
             //TODO way to do this realtime
+            //TODO set pitch etc in settings
 
             $iconsize="text-8xl";
             $textsize="text-4xl";

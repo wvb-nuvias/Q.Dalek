@@ -13,7 +13,7 @@ switch($cmd) {
         $data=["result" => "ok", "message" => "updating..."];
         break;
     case "getvol":
-        $ret=shell_Exec("/usr/local/bin/getvol");
+        $ret=shell_Exec("sudo su wouter -c /usr/local/bin/getvol");
         $data=["result" => "ok", "message" => "getting volume...", "volume" => $ret];
         break;
     case "speak": 
