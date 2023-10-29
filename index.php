@@ -31,7 +31,7 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
 
-        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-1 w-screen h-screen p-1">
+        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-1 w-screen h-screen p-1">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
