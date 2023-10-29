@@ -105,7 +105,7 @@
                     <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
-            <button onclick="back()" class="rounded-md bg-gray-400">
+            <button onclick="back()" class="rounded-md bg-yellow-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-house"></div>
                     <div class="h-1/5 <?=$textsize?>">Back</div>
