@@ -34,20 +34,20 @@
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-4 w-full h-full p-4">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col">
-                    <div class="text-9xl fa-solid fa-2xl fa-skull"></div>
-                    <div class="h-2/5">Exterminate</div>
+                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-skull"></div>
+                    <div class="h-1/5">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
                 <div class="flex flex-col">
-                    <div class="h-3/5"><i class="fa-solid fa-2xl fa-refresh"></i></div>
-                    <div class="h-2/5">Update</div>
+                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-refresh"></div>
+                    <div class="h-1/5">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
                 <div class="flex flex-col">
-                    <div class="h-3/5"><i class="fa-solid fa-2xl fa-refresh"></i></div>
-                    <div class="h-2/5">Reboot</div>
+                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-refresh"></div>
+                    <div class="h-1/5">Reboot</div>
                 </div>
             </button>
 
