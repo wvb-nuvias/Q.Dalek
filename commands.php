@@ -15,11 +15,15 @@ switch($cmd) {
     case "getvol":
         $ret=shell_Exec("sudo su wouter -c /usr/local/bin/getvol");
         $data=["result" => "ok", "message" => "getting volume...", "volume" => $ret];
-        break;
+        break;        
     case "setvol":
         $volume=$_REQUEST["volume"];
         $ret=shell_Exec("sudo su wouter -c \"/usr/local/bin/setvol ".$volume."%\"");
         $data=["result" => "ok", "message" => "setting volume...", "volume" => $volume];
+        break;
+    case "getlastchange":
+        $ret=shell_Exec("git log -1 --pretty=\"format:%ci\" /var/www/html/qdalek");
+        $data=["result" => "ok", "message" => "getting git change...", "datetime" => $ret];
         break;
     case "speak": 
         $text=$_REQUEST["text"];

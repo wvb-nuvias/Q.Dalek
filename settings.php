@@ -12,7 +12,14 @@
                 console.log(data.message + " - " + data.volume);
                 volume=parseInt(data.volume);
                 updatevolumetext();
-            });     
+            });    
+            
+            $.getJSON('commands.php?cmd=getlastchange')
+            .done(function(data) {
+                console.log(data.message + " - " + data.datetime);
+                
+                //updatevolumetext();
+            }); 
                                 
             function reboot() {                
                 $.getJSON('commands.php?cmd=reboot')
