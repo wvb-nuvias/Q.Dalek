@@ -46,7 +46,7 @@
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-refresh"></div>
+                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-power-off"></div>
                     <div class="h-1/5">Reboot</div>
                 </div>
             </button>
