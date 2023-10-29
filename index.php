@@ -33,7 +33,7 @@
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-4 w-full h-full p-4">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-4">
                     <div class="h-4/5 text-9xl fa-solid fa-2xl fa-skull"></div>
                     <div class="h-1/5 text-2xl">Exterminate</div>
                 </div>
