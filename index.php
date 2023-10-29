@@ -31,11 +31,20 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
 
+        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4 w-full h-full">
+            <button onclick="exterminate()" class="flex justify-center rounded-md">
+                <div><i class="fa-solid fa-skull fa-lg"></i></div>
+                <div>Exterminate</div>
+            </button>
+
+        </div>
+<!--
         <a onclick="exterminate()" href="#">Exterminate</a>        
         <br><br><br>
         <a onclick="reboot()" href="#">Reboot</a>        
         <br><br><br>
         <a onclick="update()" href="#">Update</a>        
+-->
         
         <audio id="sound_exterminate">
             <source src="sounds/exterminate.wav" type="audio/wav">
