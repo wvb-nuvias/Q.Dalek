@@ -11,13 +11,16 @@
             }
 
             function reboot() {                
-                $.getJSON('commands.php?cmd=reboot');                ;
+                $.getJSON('commands.php?cmd=reboot')
+                .done(function(data) {
+                    console.log(data.message);                
+                });                
             }
 
             function update() {
                 $.getJSON('commands.php?cmd=update')
                 .done(function(data) {
-                    alert('update complete');
+                    console.log(data.message);
                     document.location.reload();
                 });                
             }
