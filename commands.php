@@ -16,6 +16,7 @@ switch($cmd) {
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);
         $chkfile="/var/www/html/qdalek/tmp/".$chk.".wav";
+        $retfile="tmp/".$chk.".wav";
 
         if (file_exists($chkfile)) {
             
@@ -24,7 +25,7 @@ switch($cmd) {
             shell_Exec($cmdline);
         }
         
-        $data=["result" => "ok", "message" => "speaking...", "file" => $chkfile];
+        $data=["result" => "ok", "message" => "speaking...", "file" => $retfile];
         break;
 }
 
