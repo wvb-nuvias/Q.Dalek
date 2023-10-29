@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <html>
     <head>
         <script src="https://kit.fontawesome.com/06b2b4d018.js" crossorigin="anonymous"></script>
