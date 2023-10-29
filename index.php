@@ -57,7 +57,7 @@
                 </div>
             </button>
 
-            <button onclick="middle()" class="rounded-md bg-gray-400 row-span-2">
+            <button onclick="middle()" class="rounded-md bg-blue-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/middle_active.svg"></div>
                     <div class="<?=$textsize?>">Middle</div>
@@ -70,7 +70,7 @@
                 </div>
             </button>
 
-            <button onclick="skirt()" class="rounded-md bg-gray-400 row-span-2">
+            <button onclick="skirt()" class="rounded-md bg-green-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/skirt_active.svg"></div>
                     <div class="<?=$textsize?>">Skirt</div>
@@ -83,7 +83,7 @@
                 </div>
             </button>
 
-            <button onclick="fender()" class="rounded-md bg-gray-400 row-span-2">
+            <button onclick="fender()" class="rounded-md bg-yellow-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/bottom_active.svg"></div>
                     <div class="<?=$textsize?>">Fender</div>
