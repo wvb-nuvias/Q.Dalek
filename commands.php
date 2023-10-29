@@ -8,8 +8,8 @@ switch($cmd) {
         break;
     case "update":
         echo "updating...";
-        shell_exec("sudo /usr/local/bin/update");
-        echo "update ok.";
+        exec("sudo /usr/local/bin/update");
+        
         echo "  <script type=\"text/javascript\"> 
                     window.location.href=\"index.php\"
                 </script>";
