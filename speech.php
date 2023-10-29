@@ -23,6 +23,9 @@
     </head>
     <body style="font-family: tahoma; user-select: none">        
         <?php
+            //TODO get the texts from the database, add way to add and delete
+            //TODO way to do this realtime
+
             $iconsize="text-8xl";
             $textsize="text-4xl";
             $margin="2";            
