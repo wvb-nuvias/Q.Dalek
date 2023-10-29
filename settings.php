@@ -32,6 +32,8 @@
             function updatevolumetext() {
                 $("#increasevolume_button").removeClass("bg-opacity-10");
                 $("#decreasevolume_button").removeClass("bg-opacity-10");
+                $("#increasevolume_button").removeClass("text-opacity-10");
+                $("#decreasevolume_button").removeClass("text-opacity-10");
                 if (volume===0) {
                     $("#togglevolume_text").text("Muted");
                     $("#togglevolume_icon").removeClass("fa-volume-xmark");
@@ -43,9 +45,11 @@
                 }
                 if (volume<=0) {
                     $("#decreasevolume_button").addClass("bg-opacity-10");
+                    $("#decreasevolume_button").addClass("text-opacity-10");
                 }
                 if (volume>=100) {
                     $("#increasevolume_button").addClass("bg-opacity-10");
+                    $("#increasevolume_button").addClass("text-opacity-10");
                 }
             }
 
