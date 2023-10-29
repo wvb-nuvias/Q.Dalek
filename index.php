@@ -35,7 +35,7 @@
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col">
                     <div class="h-4/5 text-9xl fa-solid fa-2xl fa-skull"></div>
-                    <div class="h-1/5">Exterminate</div>
+                    <div class="h-1/5 text-2xl">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
