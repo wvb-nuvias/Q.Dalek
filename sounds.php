@@ -28,19 +28,19 @@
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="play('exterminate')" class="rounded-md bg-blue-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
                     <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
-            <button onclick="" class="rounded-md bg-blue-300">
+            <button onclick="play('scream')" class="rounded-md bg-blue-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid "></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-biohazard"></div>
                     <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
             <button onclick="random()" class="rounded-md bg-blue-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="increasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-shuffle"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-shuffle"></div>
                     <div class="h-1/5 <?=$textsize?>">Random</div>
                 </div>
             </button>
@@ -105,6 +105,9 @@
         
         <audio id="sound_exterminate">
             <source src="sounds/exterminate.wav" type="audio/wav">
+        </audio>
+        <audio id="sound_scream">
+            <source src="sounds/scream.wav" type="audio/wav">
         </audio>
     </body>
 </html>

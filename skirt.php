@@ -38,19 +38,19 @@
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="decreasevolume()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume +</div>
                 </div>
             </button>
             <button onclick="togglevolume()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-xmark"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-xmark"></div>
                     <div class="h-1/5 <?=$textsize?>">Mute</div>
                 </div>
             </button>
             <button onclick="increasevolume()" class="rounded-md bg-red-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="increasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume -</div>
                 </div>
             </button>
@@ -112,9 +112,5 @@
                 </div>
             </button>
         </div>
-        
-        <audio id="sound_exterminate">
-            <source src="sounds/exterminate.wav" type="audio/wav">
-        </audio>
     </body>
 </html>

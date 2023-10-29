@@ -103,9 +103,5 @@
                 </div>
             </button>
         </div>
-        
-        <audio id="sound_exterminate">
-            <source src="sounds/exterminate.wav" type="audio/wav">
-        </audio>
     </body>
 </html>
