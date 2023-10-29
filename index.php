@@ -31,40 +31,40 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
 
-        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-2 w-full h-full p-2">
+        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-1 w-screen h-screen p-1">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
                     <div class="h-1/5">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-refresh"></div>
                     <div class="h-1/5">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-power-off"></div>
                     <div class="h-1/5">Reboot</div>
                 </div>
             </button>
 
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
                     <div class="h-1/5">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-refresh"></div>
                     <div class="h-1/5">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col">
                     <div class="h-4/5 text-2xl fa-solid fa-power-off"></div>
                     <div class="h-1/5">Reboot</div>
                 </div>
