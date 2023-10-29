@@ -8,7 +8,7 @@ switch($cmd) {
         break;
     case "update":
         echo "updating...";
-        shell_Exec("sudo /usr/local/bin/update");
+        shell_Exec("sudo su wouter -c /usr/local/bin/update");
         
         echo "  <script type=\"text/javascript\"> 
                     window.location.href=\"index.php\"
