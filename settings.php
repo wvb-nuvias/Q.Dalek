@@ -11,6 +11,7 @@
             .done(function(data) {
                 console.log(data.message + " - " + data.volume);
                 volume=parseInt(data.volume);
+                updatevolumetext();
             });     
                                 
             function reboot() {                
@@ -28,12 +29,33 @@
                 });                
             }
 
+            function updatevolumetext() {
+                if (volume!=0) {
+                    $("#togglevolume_text").text("Muted");
+                    $("#togglevolume_icon").removeClass("fa-volume-xmark");
+                    $("#togglevolume_icon").addClass("fa-volume-off");
+                } else {
+                    $("#togglevolume_text").text(volume + "%");
+                    $("#togglevolume_icon").removeClass("fa-volume-off");
+                    $("#togglevolume_icon").addClass("fa-volume-xmark");
+                }
+            }
+
+            function togglevolume() {                
+                if (volume!=0) {
+                    
+                } else {
+                    
+                }
+            }
+
             function increasevolume() {
                 volume=volume+10;
-
+                
                 $.getJSON('commands.php?cmd=setvol&volume=' + volume)
                 .done(function(data) {
                     console.log(data.message + " - " + data.volume);                   
+                    updatevolumetext();
                 });
             }
 
@@ -43,6 +65,7 @@
                 $.getJSON('commands.php?cmd=setvol&volume=' + volume)
                 .done(function(data) {
                     console.log(data.message + " - " + data.volume);                   
+                    updatevolumetext();
                 });
             }
 
@@ -70,7 +93,7 @@
             <button onclick="togglevolume()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-xmark"></div>
-                    <div class="h-1/5 <?=$textsize?>">Mute</div>
+                    <div id="togglevolume_text" class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
             <button onclick="decreasevolume()" class="rounded-md bg-red-400">
