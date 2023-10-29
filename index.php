@@ -30,6 +30,10 @@
             function sounds() {
                 document.location.href="/sounds.php";
             }
+
+            function speech() {
+                document.location.href="/speech.php";
+            }
         </script>
     </head>
     <body style="font-family: tahoma; user-select: none">
@@ -50,7 +54,7 @@
                     <div class="<?=$textsize?>">Dome</div>
                 </div>
             </button>            
-            <button onclick="sounds()" class="rounded-md bg-red-400">
+            <button onclick="sounds()" class="rounded-md bg-purple-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-file-audio"></div>
                     <div class="h-1/5 <?=$textsize?>">Sounds</div>
@@ -63,10 +67,10 @@
                     <div class="<?=$textsize?>">Middle</div>
                 </div>
             </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
+            <button onclick="speech()" class="rounded-md bg-blue-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-comment"></div>
+                    <div class="h-1/5 <?=$textsize?>">Speech</div>
                 </div>
             </button>
 
@@ -83,7 +87,7 @@
                 </div>
             </button>
 
-            <button onclick="fender()" class="rounded-md bg-yellow-200 row-span-2">
+            <button onclick="fender()" class="rounded-md bg-pink-200 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/bottom_active.svg"></div>
                     <div class="<?=$textsize?>">Fender</div>
