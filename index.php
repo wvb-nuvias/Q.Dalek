@@ -39,10 +39,7 @@
             }
         </script>
     </head>
-    <body style="font-family: tahoma; user-select: none">
-        <!-- TODO get sound commands from database somehow -->
-        <!-- TODO interface to add sounds? upload? -->        
-        <!-- TODO soundboard page -->
+    <body style="font-family: tahoma; user-select: none">        
         <?php
             $iconsize="text-8xl";
             $textsize="text-4xl";

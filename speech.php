@@ -6,8 +6,11 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
         <script>    
-            function speak(text) {
-
+            function speak(text) {                
+                $.getJSON('commands.php?cmd=speak&text=' + text)
+                .done(function(data) {
+                    console.log(data.message);                    
+                });                            
             }
             
             function back() {
@@ -15,8 +18,7 @@
             }
         </script>
     </head>
-    <body style="font-family: tahoma; user-select: none">
-        <!-- TODO read volume setting on load of this page -->
+    <body style="font-family: tahoma; user-select: none">        
         <?php
             $iconsize="text-8xl";
             $textsize="text-4xl";
@@ -25,10 +27,10 @@
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="" class="rounded-md bg-green-300 col-span-3">
+            <button onclick="speak('I am a Dahlex')" class="rounded-md bg-green-300 col-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid "></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                    <div class="h-1/5 <?=$textsize?>">I am a Dalek</div>
                 </div>
             </button>
             <button onclick="" class="rounded-md bg-purple-300 col-span-3">
