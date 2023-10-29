@@ -31,17 +31,17 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
 
-        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4 w-full h-full">
-            <button onclick="exterminate()" class="flex justify-center rounded-md">
-                <div><i class="fa-solid fa-xl fa-skull"></i></div><br>
+        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-4 w-full h-full">
+            <button onclick="exterminate()" class="flex flex-col rounded-md">
+                <div><i class="fa-solid fa-xl fa-skull"></i></div>
                 <div>Exterminate</div>
             </button>
-            <button onclick="update()" class="flex justify-center rounded-md">
-                <div><i class="fa-solid fa-xl fa-refresh"></i></div><br>
+            <button onclick="update()" class="flex flex-col rounded-md">
+                <div><i class="fa-solid fa-xl fa-refresh"></i></div>
                 <div>Update</div>
             </button>
-            <button onclick="reboot()" class="flex justify-center rounded-md">
-                <div><i class="fa-solid fa-xl fa-refresh"></i></div><br>
+            <button onclick="reboot()" class="flex flex-col rounded-md">
+                <div><i class="fa-solid fa-xl fa-refresh"></i></div>
                 <div>Reboot</div>
             </button>
 
