@@ -6,9 +6,19 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
         <script>            
-            function play(sound) {
-                var objname='sound_' + sound;
-                document.getElementById(objname).play();
+            function reboot() {                
+                $.getJSON('commands.php?cmd=reboot')
+                .done(function(data) {
+                    console.log(data.message);                
+                });                
+            }
+
+            function update() {
+                $.getJSON('commands.php?cmd=update')
+                .done(function(data) {
+                    console.log(data.message);
+                    document.location.reload();
+                });                
             }
 
             function back() {
@@ -45,7 +55,7 @@
                 </div>
             </button>
 
-            <button onclick="play('exterminate')" class="rounded-md bg-gray-400">
+            <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
                     <div class="h-1/5 <?=$textsize?>">Exterminate</div>
