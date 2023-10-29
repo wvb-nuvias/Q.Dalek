@@ -6,16 +6,20 @@
             }
 
             function reboot() {
-                
+                document.location.href="commands.php?cmd=reboot";
+            }
+
+            function update() {
+                document.location.href="commands.php?cmd=update";
             }
         </script>
     </head>
     <body style="font-family: tahoma">        
         <a onclick="exterminate()" href="#">Exterminate</a>        
         <br><br><br>
-        <a href="commands.php?cmd=reboot" href="#">Reboot</a>        
+        <a onclick="reboot()" href="#">Reboot</a>        
         <br><br><br>
-        <a href="commands.php?cmd=update" href="#">Update</a>        
+        <a onclick="update()" href="#">Update</a>        
         
         <audio id="sound_exterminate">
             <source src="sounds/exterminate.wav" type="audio/wav">
