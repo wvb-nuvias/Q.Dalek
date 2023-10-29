@@ -33,62 +33,63 @@
         <?php
             $iconsize="text-8xl";
             $textsize="text-4xl";
-            $margin="1";            
+            $margin="2";            
+            $itemmargin="1";
         ?>
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
                     <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
                     <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
 
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
                     <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
                     <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
 
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
                     <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-<?=$margin?>">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
                     <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
