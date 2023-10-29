@@ -31,8 +31,8 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
         <?php
-            $iconsize="text-4xl";
-            $textsize="text-2xl";
+            $iconsize="text-8xl";
+            $textsize="text-4xl";
         ?>
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-1 w-screen h-screen p-1">
