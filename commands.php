@@ -4,13 +4,11 @@ header('Content-Type: application/json');
 $cmd=$_REQUEST["cmd"];
 
 switch($cmd) {
-    case "reboot":
-        echo "rebooting...";
+    case "reboot":        
         shell_exec("sudo systemctl reboot");
         $data=["result" => "ok", "" => "rebooting..."];
         break;
-    case "update":
-        echo "updating...";
+    case "update":        
         shell_Exec("sudo su wouter -c /usr/local/bin/update");
         $data=["result" => "ok", "" => "updating..."];
         break;
