@@ -30,6 +30,8 @@
             }
 
             function updatevolumetext() {
+                $("#increasevolume_button").removeClass("bg-opacity-10");
+                $("#decreasevolume_button").removeClass("bg-opacity-10");
                 if (volume===0) {
                     $("#togglevolume_text").text("Muted");
                     $("#togglevolume_icon").removeClass("fa-volume-xmark");
@@ -38,6 +40,12 @@
                     $("#togglevolume_text").text(volume + "%");
                     $("#togglevolume_icon").removeClass("fa-volume-off");
                     $("#togglevolume_icon").addClass("fa-volume-xmark");
+                }
+                if (volume<=0) {
+                    $("#decreasevolume_button").addClass("bg-opacity-10");
+                }
+                if (volume>=100) {
+                    $("#increasevolume_button").addClass("bg-opacity-10");
                 }
             }
 
@@ -93,9 +101,9 @@
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="increasevolume()" class="rounded-md bg-blue-400">
+            <button id="increasevolume_button" onclick="increasevolume()" class="rounded-md bg-blue-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume +</div>
                 </div>
             </button>
@@ -105,9 +113,9 @@
                     <div id="togglevolume_text" class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="decreasevolume()" class="rounded-md bg-blue-200">
+            <button id="decreasevolume_button" onclick="decreasevolume()" class="rounded-md bg-blue-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div id="increasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume -</div>
                 </div>
             </button>
