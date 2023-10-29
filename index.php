@@ -17,6 +17,7 @@
             function update() {
                 $.getJSON('commands.php?cmd=update')
                 .done(function(data) {
+                    alert('update complete');
                     document.location.reload();
                 });                
             }
