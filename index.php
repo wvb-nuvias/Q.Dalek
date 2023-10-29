@@ -33,18 +33,19 @@
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4 w-full h-full">
             <button onclick="exterminate()" class="flex justify-center rounded-md">
-                <div><i class="fa-solid fa-skull fa-xl"></i></div><br>
+                <div><i class="fa-solid fa-xl fa-skull"></i></div><br>
                 <div>Exterminate</div>
+            </button>
+            <button onclick="update()" class="flex justify-center rounded-md">
+                <div><i class="fa-solid fa-xl fa-refresh"></i></div><br>
+                <div>Update</div>
+            </button>
+            <button onclick="reboot()" class="flex justify-center rounded-md">
+                <div><i class="fa-solid fa-xl fa-refresh"></i></div><br>
+                <div>Reboot</div>
             </button>
 
         </div>
-<!--
-        <a onclick="exterminate()" href="#">Exterminate</a>        
-        <br><br><br>
-        <a onclick="reboot()" href="#">Reboot</a>        
-        <br><br><br>
-        <a onclick="update()" href="#">Update</a>        
--->
         
         <audio id="sound_exterminate">
             <source src="sounds/exterminate.wav" type="audio/wav">
