@@ -30,8 +30,8 @@
             }
 
             function updatevolumetext() {
-                $("#increasevolume_button").removeClass("bg-opacity-10");
-                $("#decreasevolume_button").removeClass("bg-opacity-10");
+                $("#increasevolume_button").removeClass("disabled");
+                $("#decreasevolume_button").removeClass("disabled");
                 if (volume===0) {
                     $("#togglevolume_text").text("Muted");
                     $("#togglevolume_icon").removeClass("fa-volume-xmark");
@@ -42,10 +42,10 @@
                     $("#togglevolume_icon").addClass("fa-volume-xmark");
                 }
                 if (volume<=0) {
-                    $("#decreasevolume_button").addClass("bg-opacity-10");
+                    $("#decreasevolume_button").addClass("disabled");
                 }
                 if (volume>=100) {
-                    $("#increasevolume_button").addClass("bg-opacity-10");
+                    $("#increasevolume_button").addClass("disabled");
                 }
             }
 
