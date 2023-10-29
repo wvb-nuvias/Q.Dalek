@@ -32,9 +32,11 @@
         <!-- TODO soundboard page -->
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-4 w-full h-full p-4">
-            <button onclick="exterminate()" class="flex flex-col rounded-md bg-gray-400">
-                <div><i class="fa-solid fa-2xl fa-skull"></i></div>
-                <div>Exterminate</div>
+            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+                <div class="flex flex-col">
+                    <div><i class="fa-solid fa-2xl fa-skull"></i></div>
+                    <div>Exterminate</div>
+                </div>
             </button>
             <button onclick="update()" class="flex flex-col rounded-md bg-green-400">
                 <div><i class="fa-solid fa-2xl fa-refresh"></i></div>
