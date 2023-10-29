@@ -43,18 +43,15 @@
 
             function togglevolume() {                
                 if (volume!=0) {
-                    $.getJSON('commands.php?cmd=setvol&volume=0')
-                    .done(function(data) {
-                        console.log(data.message + " - " + data.volume);                   
-                        updatevolumetext();
-                    });
+                    volume=0;                    
                 } else {
-                    $.getJSON('commands.php?cmd=setvol&volume=60')
-                    .done(function(data) {
-                        console.log(data.message + " - " + data.volume);                   
-                        updatevolumetext();
-                    });
+                    volume=60;                
                 }
+                $.getJSON('commands.php?cmd=setvol&volume=' + volume)
+                .done(function(data) {
+                    console.log(data.message + " - " + data.volume);                   
+                    updatevolumetext();
+                });
             }
 
             function increasevolume() {
