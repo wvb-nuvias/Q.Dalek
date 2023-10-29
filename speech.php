@@ -28,16 +28,16 @@
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="speak('I am a Dahlex')" class="rounded-md bg-green-300 col-span-3">
+            <button onclick="speak('I am a Dahlekk.')" class="rounded-md bg-green-300 col-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid "></div>
                     <div class="h-1/5 <?=$textsize?>">I am a Dalek</div>
                 </div>
             </button>
-            <button onclick="" class="rounded-md bg-purple-300 col-span-3">
+            <button onclick="speak('I am your soldier.')" class="rounded-md bg-purple-300 col-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid "></div>
-                    <div class="h-1/5 <?=$textsize?>"></div>
+                    <div class="h-1/5 <?=$textsize?>">I am your soldier</div>
                 </div>
             </button>
             <button onclick="" class="rounded-md bg-pink-300 col-span-3">
