@@ -11,8 +11,8 @@
             .done(function(data) {
                 console.log(data.message + " - " + data.volume);
                 volume=data.volume;
-            });                
-        
+            });     
+                                
             function reboot() {                
                 $.getJSON('commands.php?cmd=reboot')
                 .done(function(data) {
@@ -26,6 +26,24 @@
                     console.log(data.message);
                     document.location.reload();
                 });                
+            }
+
+            function increasevolume() {
+                volume=volume+10;
+
+                $.getJSON('commands.php?cmd=setvol&volume=' + volume)
+                .done(function(data) {
+                    console.log(data.message + " - " + data.volume);                   
+                });
+            }
+
+            function decreasevolume() {
+                volume=volume-10;
+
+                $.getJSON('commands.php?cmd=setvol&volume=' + volume)
+                .done(function(data) {
+                    console.log(data.message + " - " + data.volume);                   
+                });
             }
 
             function back() {
