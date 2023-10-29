@@ -16,7 +16,7 @@
             
             $.getJSON('commands.php?cmd=getlastchange')
             .done(function(data) {
-                console.log(data.message + " - " + data.datetime);
+                console.log(data.message + " - " + data.lastchange);
                 
                 //updatevolumetext();
             }); 

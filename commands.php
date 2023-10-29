@@ -23,7 +23,7 @@ switch($cmd) {
         break;
     case "getlastchange":
         $ret=shell_Exec("git log -1 --pretty=\"format:%ci\" /var/www/html/qdalek");
-        $data=["result" => "ok", "message" => "getting git change...", "datetime" => $ret];
+        $data=["result" => "ok", "message" => "getting git change...", "lastchange" => $ret];
         break;
     case "speak": 
         $text=$_REQUEST["text"];
