@@ -30,7 +30,7 @@
             }
 
             function updatevolumetext() {
-                if (volume!=0) {
+                if (volume==0) {
                     $("#togglevolume_text").text("Muted");
                     $("#togglevolume_icon").removeClass("fa-volume-xmark");
                     $("#togglevolume_icon").addClass("fa-volume-off");
