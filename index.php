@@ -37,7 +37,7 @@
             $itemmargin="1";
         ?>
 
-        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
+        <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
