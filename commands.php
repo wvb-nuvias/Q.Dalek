@@ -18,7 +18,7 @@ switch($cmd) {
         break;
     case "setvol":
         $volume=$_REQUEST["volume"];
-        $ret=shell_Exec("sudo su wouter -c /usr/local/bin/setvol ".$volume."%");
+        $ret=shell_Exec("sudo su wouter -c \"/usr/local/bin/setvol ".$volume."%\"");
         $data=["result" => "ok", "message" => "setting volume...", "volume" => $volume];
         break;
     case "speak": 
