@@ -5,7 +5,14 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-        <script>            
+        <script>        
+            var volume=0;
+            $.getJSON('commands.php?cmd=getvol')
+            .done(function(data) {
+                console.log(data.message + " - " + data.volume);
+                volume=data.volume;
+            });                
+        
             function reboot() {                
                 $.getJSON('commands.php?cmd=reboot')
                 .done(function(data) {

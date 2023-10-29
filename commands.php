@@ -12,6 +12,10 @@ switch($cmd) {
         shell_Exec("sudo su wouter -c /usr/local/bin/update");
         $data=["result" => "ok", "message" => "updating..."];
         break;
+    case "getvol":
+        $ret=shell_Exec("/usr/local/bin/getvol");
+        $data=["result" => "ok", "message" => "getting volume...", "volume" => $ret];
+        break;
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);
