@@ -68,7 +68,7 @@
         </div>
         
         <audio id="output">
-            <source src="/tmp/output.wav" type="audio/wav">
+            <source src="tmp/output.wav" type="audio/wav">
         </audio>
     </body>
 </html>
