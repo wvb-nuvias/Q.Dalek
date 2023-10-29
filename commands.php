@@ -14,9 +14,17 @@ switch($cmd) {
         break;
     case "speak": 
         $text=$_REQUEST["text"];
-        $cmdline="speak \"".$text."\" -ven+m6 -g6 -k30 -s150 -r35 -a250 -w /var/www/html/qdalek/tmp/output.wav";       
-        shell_Exec($cmdline);
-        $data=["result" => "ok", "message" => "speaking..."];
+        $chk=str_replace(" ","_",$text);
+        $chkfile="/var/www/html/qdalek/tmp/".$chk.".wav";
+
+        if (file_exists($chkfile)) {
+            
+        } else {
+            $cmdline="speak \"".$text."\" -ven+m6 -g6 -k30 -s150 -r35 -a250 -w ".$chkfile;       
+            shell_Exec($cmdline);
+        }
+        
+        $data=["result" => "ok", "message" => "speaking...", "file" => $chkfile];
         break;
 }
 

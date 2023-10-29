@@ -10,7 +10,7 @@
                 $.getJSON('commands.php?cmd=speak&text=' + text)
                 .done(function(data) {
                     console.log(data.message); 
-                    document.getElementById("output").src='tmp/output.wav';
+                    document.getElementById("output").src=data.file;
                     document.getElementById("output").play();                   
                 });                            
             }
