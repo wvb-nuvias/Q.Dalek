@@ -59,7 +59,7 @@
             </button>
             <button onclick="previous()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
                     <div class="h-1/5 <?=$textsize?>">Previous</div>
                 </div>
             </button>
@@ -78,7 +78,7 @@
             </button>
             <button onclick="next()" class="rounded-md bg-red-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-right"></div>
                     <div class="h-1/5 <?=$textsize?>">Next</div>
                 </div>
             </button>
