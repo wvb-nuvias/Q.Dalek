@@ -150,19 +150,19 @@
                 </div>
             </button>
             
-            <button onclick="update()" class="rounded-md bg-green-400">
+            <button onclick="update()" class="rounded-md bg-yellow-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
+            <button onclick="reboot()" class="rounded-md bg-yellow-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
                     <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
-            <button onclick="back()" class="rounded-md bg-yellow-400">
+            <button onclick="back()" class="rounded-md bg-yellow-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-house"></div>
                     <div class="h-1/5 <?=$textsize?>">Back</div>
