@@ -43,9 +43,17 @@
 
             function togglevolume() {                
                 if (volume!=0) {
-                    
+                    $.getJSON('commands.php?cmd=setvol&volume=0')
+                    .done(function(data) {
+                        console.log(data.message + " - " + data.volume);                   
+                        updatevolumetext();
+                    });
                 } else {
-                    
+                    $.getJSON('commands.php?cmd=setvol&volume=60')
+                    .done(function(data) {
+                        console.log(data.message + " - " + data.volume);                   
+                        updatevolumetext();
+                    });
                 }
             }
 
