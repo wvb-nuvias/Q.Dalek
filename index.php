@@ -2,7 +2,7 @@
     <head>
         <script>
             function exterminate() {
-                fetch('https://localhost/play.php?q=exterminate', {
+                fetch('http://10.0.6.41/play.php?q=exterminate', {
                     headers: {
                         'Accept': 'application/json'
                     }
