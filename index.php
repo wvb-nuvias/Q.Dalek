@@ -30,65 +30,68 @@
         <!-- TODO get sound commands from database somehow -->
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
+        <?php
+            $iconsize="text-4xl";
+            $textsize="text-2xl";
+        ?>
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-1 w-screen h-screen p-1">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
-                    <div class="h-1/5">Exterminate</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
+                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-refresh"></div>
-                    <div class="h-1/5">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
+                    <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-power-off"></div>
-                    <div class="h-1/5">Reboot</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
+                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
+                </div>
+            </button>            
+
+            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+                <div class="flex flex-col">
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
+                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                </div>
+            </button>
+            <button onclick="update()" class="rounded-md bg-green-400">
+                <div class="flex flex-col">
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
+                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                </div>
+            </button>
+            <button onclick="reboot()" class="rounded-md bg-red-400">
+                <div class="flex flex-col">
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
+                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
 
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
-                    <div class="h-1/5">Exterminate</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
+                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-refresh"></div>
-                    <div class="h-1/5">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
+                    <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-red-400">
                 <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-power-off"></div>
-                    <div class="h-1/5">Reboot</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
+                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
-
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
-                    <div class="h-1/5">Exterminate</div>
-                </div>
-            </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-refresh"></div>
-                    <div class="h-1/5">Update</div>
-                </div>
-            </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col">
-                    <div class="h-4/5 text-2xl fa-solid fa-power-off"></div>
-                    <div class="h-1/5">Reboot</div>
-                </div>
-            </button>
-
         </div>
         
         <audio id="sound_exterminate">
