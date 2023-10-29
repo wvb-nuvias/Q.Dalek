@@ -9,7 +9,8 @@
             function speak(text) {                
                 $.getJSON('commands.php?cmd=speak&text=' + text)
                 .done(function(data) {
-                    console.log(data.message);                    
+                    console.log(data.message); 
+                    document.getElementById("output").play();                   
                 });                            
             }
             
@@ -64,6 +65,10 @@
                     <div class="h-1/5 <?=$textsize?>">Back</div>
                 </div>
             </button>
-        </div>        
+        </div>
+        
+        <audio id="output">
+            <source src="/tmp/output.wav" type="audio/wav">
+        </audio>
     </body>
 </html>
