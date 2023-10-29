@@ -22,8 +22,13 @@
                 document.location.href="/fender.php";
             }
 
+
             function settings() {
                 document.location.href="/settings.php";
+            }
+
+            function sounds() {
+                document.location.href="/sounds.php";
             }
         </script>
     </head>
@@ -45,10 +50,10 @@
                     <div class="<?=$textsize?>">Dome</div>
                 </div>
             </button>            
-            <button onclick="reboot()" class="rounded-md bg-red-400">
+            <button onclick="sounds()" class="rounded-md bg-red-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
-                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-file-audio"></div>
+                    <div class="h-1/5 <?=$textsize?>">Sounds</div>
                 </div>
             </button>
 
