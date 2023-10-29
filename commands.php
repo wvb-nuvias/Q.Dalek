@@ -22,7 +22,7 @@ switch($cmd) {
         $data=["result" => "ok", "message" => "setting volume...", "volume" => $volume];
         break;
     case "getlastchange":
-        $ret=shell_Exec("git log -1 --pretty=\"format:%ci\" /var/www/html/qdalek");
+        $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%ci\" /home/wouter/source/repos/Q.Dalek\"");
         $data=["result" => "ok", "message" => "getting git change...", "lastchange" => $ret];
         break;
     case "speak": 
