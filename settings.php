@@ -55,23 +55,27 @@
             }
 
             function increasevolume() {
-                volume=volume+10;
-                
-                $.getJSON('commands.php?cmd=setvol&volume=' + volume)
-                .done(function(data) {
-                    console.log(data.message + " - " + data.volume);                   
-                    updatevolumetext();
-                });
+                if (volume<100) {
+                    volume=volume+10;
+                    
+                    $.getJSON('commands.php?cmd=setvol&volume=' + volume)
+                    .done(function(data) {
+                        console.log(data.message + " - " + data.volume);                   
+                        updatevolumetext();
+                    });
+                }
             }
 
             function decreasevolume() {
-                volume=volume-10;
+                if (volume>0) {
+                    volume=volume-10;
 
-                $.getJSON('commands.php?cmd=setvol&volume=' + volume)
-                .done(function(data) {
-                    console.log(data.message + " - " + data.volume);                   
-                    updatevolumetext();
-                });
+                    $.getJSON('commands.php?cmd=setvol&volume=' + volume)
+                    .done(function(data) {
+                        console.log(data.message + " - " + data.volume);                   
+                        updatevolumetext();
+                    });
+                }
             }
 
             function back() {
@@ -89,19 +93,19 @@
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="increasevolume()" class="rounded-md bg-gray-400">
+            <button onclick="increasevolume()" class="rounded-md bg-blue-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="decreasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume +</div>
                 </div>
             </button>
-            <button onclick="togglevolume()" class="rounded-md bg-green-400">
+            <button onclick="togglevolume()" class="rounded-md bg-blue-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-xmark"></div>
                     <div id="togglevolume_text" class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="decreasevolume()" class="rounded-md bg-red-400">
+            <button onclick="decreasevolume()" class="rounded-md bg-blue-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="increasevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-volume-high"></div>
                     <div class="h-1/5 <?=$textsize?>">Volume -</div>
