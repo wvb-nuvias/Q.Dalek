@@ -35,7 +35,7 @@
             <button onclick="play('scream')" class="rounded-md bg-blue-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-biohazard"></div>
-                    <div class="h-1/5 <?=$textsize?>"></div>
+                    <div class="h-1/5 <?=$textsize?>">Scream</div>
                 </div>
             </button>
             <button onclick="random()" class="rounded-md bg-blue-400">
