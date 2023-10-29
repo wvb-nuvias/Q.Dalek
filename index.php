@@ -33,7 +33,7 @@
 
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4 w-full h-full">
             <button onclick="exterminate()" class="flex justify-center rounded-md">
-                <div><i class="fa-solid fa-skull fa-lg"></i></div>
+                <div><i class="fa-solid fa-skull fa-xl"></i></div><br>
                 <div>Exterminate</div>
             </button>
 
