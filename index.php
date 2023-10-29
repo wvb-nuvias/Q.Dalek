@@ -10,6 +10,18 @@
                 document.location.href="/dome.php";
             }
 
+            function middle() {
+                document.location.href="/middle.php";
+            }
+
+            function skirt() {
+                document.location.href="/skirt.php";
+            }
+
+            function fender() {
+                document.location.href="/fender.php";
+            }
+
             function settings() {
                 document.location.href="/settings.php";
             }
@@ -40,54 +52,36 @@
                 </div>
             </button>
 
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+            <button onclick="middle()" class="rounded-md bg-gray-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                    <div><img src="images/middle_active.svg"></div>
+                    <div class="<?=$textsize?>">Middle</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
-                </div>
-            </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
-                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
 
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+            <button onclick="skirt()" class="rounded-md bg-gray-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                    <div><img src="images/skirt_active.svg"></div>
+                    <div class="<?=$textsize?>">Skirt</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
-                </div>
-            </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
-                <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
-                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
                 </div>
             </button>
 
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+            <button onclick="fender()" class="rounded-md bg-gray-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
-                </div>
-            </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
-                <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div><img src="images/bottom_active.svg"></div>
+                    <div class="<?=$textsize?>">Fender</div>
                 </div>
             </button>
             <button onclick="settings()" class="rounded-md bg-pink-400">
