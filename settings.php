@@ -10,7 +10,7 @@
             $.getJSON('commands.php?cmd=getvol')
             .done(function(data) {
                 console.log(data.message + " - " + data.volume);
-                volume=data.volume;
+                volume=parseInt(data.volume);
             });     
                                 
             function reboot() {                
