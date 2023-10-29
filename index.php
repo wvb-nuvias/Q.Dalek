@@ -22,17 +22,20 @@
                 document.location.href="/fender.php";
             }
 
-
-            function settings() {
-                document.location.href="/settings.php";
-            }
-
             function sounds() {
                 document.location.href="/sounds.php";
             }
 
             function speech() {
                 document.location.href="/speech.php";
+            }
+
+            function effects() {
+                document.location.href="/effects.php";
+            }
+
+            function settings() {
+                document.location.href="/settings.php";
             }
         </script>
     </head>
@@ -80,10 +83,10 @@
                     <div class="<?=$textsize?>">Skirt</div>
                 </div>
             </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
+            <button onclick="effects()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-wand-magic-sparkles"></div>
+                    <div class="h-1/5 <?=$textsize?>">Effects</div>
                 </div>
             </button>
 
