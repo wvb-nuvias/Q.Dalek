@@ -31,11 +31,11 @@
         <!-- TODO interface to add sounds? upload? -->        
         <!-- TODO soundboard page -->
 
-        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-4 w-full h-full p-4">
+        <div class="grid grid-flow-col grid-cols-3 grid-rows-3 justify-items-stretch gap-2 w-full h-full p-2">
             <button onclick="exterminate()" class="rounded-md bg-gray-400">
-                <div class="flex flex-col gap-4">
-                    <div class="h-4/5 text-9xl fa-solid fa-2xl fa-skull"></div>
-                    <div class="h-1/5 text-2xl">Exterminate</div>
+                <div class="flex flex-col gap-2">
+                    <div class="h-4/5 text-2xl fa-solid fa-skull"></div>
+                    <div class="h-1/5">Exterminate</div>
                 </div>
             </button>
             <button onclick="update()" class="rounded-md bg-green-400">
