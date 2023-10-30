@@ -13,6 +13,7 @@ if (file_exists($configfile)) {
     $cfg = [
         "git_source" => "git@github.com:wvb-nuvias/Q.Dalek.git",
         "installpath" => "/var/www/html/qdalek",
+        "masteruser" => "wouter",
         "speak_pitch" => "50",
         "speak_modulate" => "35",
         "speak_speed" => "150",
@@ -32,28 +33,28 @@ switch($cmd) {
         $data=["result" => "ok", "message" => "rebooting..."];
         break;
     case "update":        
-        shell_Exec("sudo su wouter -c /usr/local/bin/update");
+        shell_Exec("sudo su ".$cfg["masteruser"]." -c /usr/local/bin/update");
         $data=["result" => "ok", "message" => "updating..."];
         break;
     case "getvol":
-        $ret=shell_Exec("sudo su wouter -c /usr/local/bin/getvol");
+        $ret=shell_Exec("sudo su ".$cfg["masteruser"]." -c /usr/local/bin/getvol");
         $data=["result" => "ok", "message" => "getting volume...", "volume" => $ret];
         break;        
     case "setvol":
         $volume=$_REQUEST["volume"];
-        $ret=shell_Exec("sudo su wouter -c \"/usr/local/bin/setvol ".$volume."%\"");
+        $ret=shell_Exec("sudo su ".$cfg["masteruser"]." -c \"/usr/local/bin/setvol ".$volume."%\"");
         $data=["result" => "ok", "message" => "setting volume...", "volume" => $volume];
         break;
     case "getlastchange":
-        $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%ci\" ".$path."\"");
+        $ret=shell_Exec("sudo su ".$cfg["masteruser"]." -c \"git log -1 --pretty=\"format:%ci\" ".$path."\"");
         $data=["result" => "ok", "message" => "getting git change...", "lastchange" => $ret];
         break;
     case "getlastchangeid":
-        $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%H\" ".$path."\"");
+        $ret=shell_Exec("sudo su ".$cfg["masteruser"]." -c \"git log -1 --pretty=\"format:%H\" ".$path."\"");
         $data=["result" => "ok", "message" => "getting git change id...", "lastid" => $ret];
         break;
     case "getremotelastid":        
-        $ret=shell_Exec("sudo su wouter -c \"git ls-remote --heads ".$cfg["git_source"]."\"");
+        $ret=shell_Exec("sudo su ".$cfg["masteruser"]." -c \"git ls-remote --heads ".$cfg["git_source"]."\"");
         $dat=explode("\t",$ret);        
         $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => $dat[0]];
         break;
