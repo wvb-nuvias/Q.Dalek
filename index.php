@@ -87,7 +87,7 @@
                     </div>
                 </button>
 
-                <button onclick="fender()" class="rounded-md bg-pink-300 row-span-3">
+                <button onclick="fender()" class="rounded-md bg-pink-300 row-span-2">
                     <div class="flex flex-col gap-<?=$itemmargin?>">
                         <div><img src="images/bottom_active.svg"></div>
                         <div class="<?=$textsize?>">Fender</div>
