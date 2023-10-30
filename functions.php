@@ -18,6 +18,7 @@ if (file_exists($configfile)) {
         "speak_wordsgap" => "6",
         "iconsize" => "text-8xl",
         "textsize" => "text-4xl",
+        "titlesize" => "text-5xl",
         "margin" => "2",
         "itemmargin" => "1"
     ];
@@ -27,6 +28,7 @@ if (file_exists($configfile)) {
 
 $iconsize=$cfg["iconsize"];
 $textsize=$cfg["textsize"];
+$titlesize=$cfg["titlesize"];
 $margin=$cfg["margin"];           
 $itemmargin=$cfg["itemmargin"];
 

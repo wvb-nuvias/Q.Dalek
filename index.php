@@ -44,7 +44,7 @@
     </head>
     <body style="font-family: tahoma; user-select: none">        
         <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <div class="rounded-md bg-purple-200 col-span-4">
+            <div class="rounded-md bg-purple-200 col-span-4 <?=$titlesize?>">
                 Main Menu
             </div>
             <button onclick="dome()" class="rounded-md bg-purple-300 row-span-3">
