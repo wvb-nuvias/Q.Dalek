@@ -13,3 +13,7 @@
         <script src="/functions.js?random=<?php echo uniqid(); ?>"></script>
     </head>
     <body style="font-family: tahoma; user-select: none">
+    <script>
+        internet_connected=<?=$internet_connected?>;
+        installpath="<?=$installpath?>";
+    </script>

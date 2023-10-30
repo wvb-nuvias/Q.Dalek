@@ -31,6 +31,7 @@ $textsize=$cfg["textsize"];
 $titlesize=$cfg["titlesize"];
 $margin=$cfg["margin"];           
 $itemmargin=$cfg["itemmargin"];
+$installpath=$cfg["installpath"];
 
 $internet_test=@fsockopen("www.office.com", 443);
 if ($internet_test){

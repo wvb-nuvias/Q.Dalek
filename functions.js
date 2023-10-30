@@ -3,6 +3,7 @@ var lastchanged="";
 var lastchangedid="";
 var lastremotechangedid="";
 var internet_connected=0;
+var installpath="";
 
 $.getJSON('commands.php?cmd=getvol')
 .done(function(data) {
