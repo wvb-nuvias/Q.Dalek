@@ -4,7 +4,7 @@
         Speech Settings
     </div>
     <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?> h-full">
-        <button onclick="" class="rounded-md bg-purple-400 col-span-4 p-<?=$margin?>">
+        <button onclick="" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
@@ -16,7 +16,7 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-purple-400 col-span-4 p-<?=$margin?>">
+        <button onclick="" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
