@@ -2,6 +2,7 @@ var volume=0;
 var lastchanged="";
 var lastchangedid="";
 var lastremotechangedid="";
+var internet_connected=0;
 
 console.log("Is Internet Connected=" + internet_connected);
 
