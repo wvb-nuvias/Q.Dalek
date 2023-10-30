@@ -75,7 +75,7 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button onclick="backseetings()" class="rounded-md bg-green-200">
+        <button onclick="backsettings()" class="rounded-md bg-green-200">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid fa-house"></div>
                 <div class="h-1/5 <?=$textsize?>">Back</div>

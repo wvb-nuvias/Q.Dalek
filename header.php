@@ -1,7 +1,6 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
-<?php
-    $path=dirname(realpath("commands.php"));
-    include $path."/functions.php";
+<?php    
+    include "/var/www/html/qdalek/functions.php";
 ?>
 <html>
     <head>
@@ -16,4 +15,6 @@
     <script>
         internet_connected=<?=$internet_connected?>;
         installpath="<?=$installpath?>";
+
+        console.log("Installed : "+installpath);
     </script>
