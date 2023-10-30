@@ -9,7 +9,7 @@
             
 
             function back() {
-                document.location.href="/index.php";
+                document.location.href="/settings.php";
             }
         </script>
     </head>
