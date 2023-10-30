@@ -127,6 +127,16 @@ function play(sound) {
     document.getElementById(objname).play();
 }
 
+function speak(text) {                
+    $.getJSON('commands.php?cmd=speak&text=' + text)
+    .done(function(data) {
+        console.log(data.message); 
+        console.log(data.file); 
+        document.getElementById("output").src=data.file;
+        document.getElementById("output").play();                   
+    });                            
+}
+
 function generalsettings() {
     document.location.href="/settings/general.php";
 }
