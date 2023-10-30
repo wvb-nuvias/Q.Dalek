@@ -152,7 +152,7 @@
     </head>
     <body style="font-family: tahoma; user-select: none">        
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button id="increasevolume_button" onclick="increasevolume()" class="rounded-md bg-blue-400">
+            <button id="increasevolume_button" onclick="increasevolume()" class="rounded-md bg-blue-400 row-span-2">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                     <div id="increasevolume_text" class="h-1/5 <?=$textsize?>">Volume +</div>
