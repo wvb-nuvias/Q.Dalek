@@ -17,7 +17,7 @@
     </head>
     <body style="font-family: tahoma; user-select: none">
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-        <button onclick="" class="rounded-md bg-red-400">
+            <button onclick="" class="rounded-md bg-red-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
                     <div class="h-1/5 <?=$textsize?>"></div>
