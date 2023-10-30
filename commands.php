@@ -29,6 +29,11 @@ switch($cmd) {
         $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%H\" /home/wouter/source/repos/Q.Dalek\"");
         $data=["result" => "ok", "message" => "getting git change id...", "lastid" => $ret];
         break;
+    case "getremotelastid":
+        // git ls-remote -t  --heads git@github.com:wvb-nuvias/Q.Dalek.git
+        $ret=shell_Exec("sudo su wouter -c \"git ls-remote --heads git@github.com:wvb-nuvias/Q.Dalek.git\"");
+        $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => explode("\t",$ret)[0]];
+        break;
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);

@@ -7,6 +7,9 @@
 
         <script>        
             var volume=0;
+            var lastchanged="";
+            var lastchangedid="";
+
             $.getJSON('commands.php?cmd=getvol')
             .done(function(data) {
                 console.log(data.message + " - " + data.volume);
@@ -16,12 +19,20 @@
             
             $.getJSON('commands.php?cmd=getlastchange')
             .done(function(data) {
-                console.log(data.message + " - " + data.lastchange);                                
+                console.log(data.message + " - " + data.lastchange);
+                lastchanged=data.lastchange;                               
             }); 
 
             $.getJSON('commands.php?cmd=getlastchangeid')
             .done(function(data) {
                 console.log(data.message + " - " + data.lastid);                                
+                lastchangedid=data.lastid;
+            }); 
+
+            $.getJSON('commands.php?cmd=getremotelastid')
+            .done(function(data) {
+                console.log(data.message + " - " + data.lastid);                                
+                //lastchangedid=data.lastid;
             }); 
                                 
             function reboot() {                
