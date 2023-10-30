@@ -32,7 +32,7 @@
                 //TODO if no internet, do not allow updating.
                 $.getJSON('commands.php?cmd=getremotelastid')
                 .done(function(data) {                    
-                    lastremotechangedid=data.lastid.split('\t')[0];
+                    lastremotechangedid=data.lastid;
                     console.log(data.message + " - " + lastremotechangedid);                                
 
                     $("#update_button").removeClass("opacity-20");
