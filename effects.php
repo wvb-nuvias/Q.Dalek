@@ -9,29 +9,13 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
         <script>            
-            function reboot() {                
-                $.getJSON('commands.php?cmd=reboot')
-                .done(function(data) {
-                    console.log(data.message);                
-                });                
-            }
-
-            function update() {
-                $.getJSON('commands.php?cmd=update')
-                .done(function(data) {
-                    console.log(data.message);
-                    document.location.reload();
-                });                
-            }
-
+            
             function back() {
                 document.location.href="/index.php";
             }
         </script>
     </head>
-    <body style="font-family: tahoma; user-select: none">
-        <!-- TODO read volume setting on load of this page -->
-        
+    <body style="font-family: tahoma; user-select: none">        
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="decreasevolume()" class="rounded-md bg-gray-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
