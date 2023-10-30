@@ -1,6 +1,6 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
-    include "/functions.php";
+    include "functions.php";
 ?>
 <html>
     <head>
