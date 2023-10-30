@@ -51,12 +51,14 @@
             }
 
             function update() {
-                $("#update_icon").addClass("fa-spin");
-                $.getJSON('commands.php?cmd=update')
-                .done(function(data) {
-                    console.log(data.message);
-                    document.location.reload();
-                });                
+                if (lastremotechangedid!=lastchangedid) {
+                    $("#update_icon").addClass("fa-spin");
+                    $.getJSON('commands.php?cmd=update')
+                    .done(function(data) {
+                        console.log(data.message);
+                        document.location.reload();
+                    });                
+                }
             }
 
             function updatevolumetext() {
