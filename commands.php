@@ -62,9 +62,8 @@ switch($cmd) {
         $chkfile=$cfg["installpath"]."/speech/".$chk.".wav";
         $retfile="speech/".$chk.".wav";
         
-        if (!file_exists($chkfile)) {
-            //TODO use config file here, and add settings to change them
-            $cmdline="speak \"".$text."\" -ven+m6 -g6 -k30 -s150 -r35 -a250 -w ".$chkfile;       
+        if (!file_exists($chkfile)) {            
+            $cmdline="speak \"".$text."\" -ven+m6 -p".$cfg["speak_pitch"]." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$cfg["speak_speed"]." -r".$cfg["speak_modulate"]." -a".$cfg["speak_amplitude"]." -w ".$chkfile;       
             shell_Exec($cmdline);
         }
         
