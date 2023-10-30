@@ -156,41 +156,41 @@
                 </div>
             </button>
 
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+            <button onclick="" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
+            <button onclick="" class="rounded-md bg-green-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
+            <button onclick="" class="rounded-md bg-green-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
-                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
 
-            <button onclick="exterminate()" class="rounded-md bg-gray-400">
+            <button onclick="" class="rounded-md bg-purple-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-skull"></div>
-                    <div class="h-1/5 <?=$textsize?>">Exterminate</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="update()" class="rounded-md bg-green-400">
+            <button onclick="" class="rounded-md bg-purple-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
-            <button onclick="reboot()" class="rounded-md bg-red-400">
+            <button onclick="" class="rounded-md bg-purple-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-power-off"></div>
-                    <div class="h-1/5 <?=$textsize?>">Reboot</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                    <div class="h-1/5 <?=$textsize?>"></div>
                 </div>
             </button>
             
