@@ -51,6 +51,7 @@
             }
 
             function update() {
+                $("#update_icon").addClass("fa-spin");
                 $.getJSON('commands.php?cmd=update')
                 .done(function(data) {
                     console.log(data.message);
