@@ -30,9 +30,12 @@ $textsize=$cfg["textsize"];
 $margin=$cfg["margin"];           
 $itemmargin=$cfg["itemmargin"];
 
-@fsockopen("www.office.com", 443,$internet_connected);
-if ($internet_connected){
+$internet_test=@fsockopen("www.office.com", 443);
+if ($internet_test){
     fclose($connected);
+    $internet_connected=true;
+} else {
+    $internet_connected=false;
 }
 
 ?>
