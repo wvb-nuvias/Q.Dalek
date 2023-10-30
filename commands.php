@@ -32,7 +32,7 @@ switch($cmd) {
     case "getremotelastid":
         // git ls-remote -t  --heads git@github.com:wvb-nuvias/Q.Dalek.git
         $ret=shell_Exec("sudo su wouter -c \"git ls-remote --heads git@github.com:wvb-nuvias/Q.Dalek.git\"");
-        $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => explode("\t",$ret)[0]];
+        $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => $ret];
         break;
     case "speak": 
         $text=$_REQUEST["text"];
