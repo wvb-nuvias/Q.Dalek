@@ -122,6 +122,11 @@ function decreasevolume() {
     }
 }
 
+function play(sound) {
+    var objname='sound_' + sound;
+    document.getElementById(objname).play();
+}
+
 function generalsettings() {
     document.location.href="/settings/general.php";
 }
