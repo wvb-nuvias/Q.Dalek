@@ -43,7 +43,7 @@
         </script>
     </head>
     <body style="font-family: tahoma; user-select: none">        
-        <div class="flex w-screen h-screen p-<?=$margin?> flex-row">
+        <div class="flex w-screen h-screen p-<?=$margin?> flex-col">
             <div class="rounded-md bg-purple-200 <?=$titlesize?> flex items-center justify-center h-24">
                 Main Menu
             </div>
