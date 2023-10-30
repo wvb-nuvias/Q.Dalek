@@ -38,6 +38,9 @@
                     $("#update_button").removeClass("opacity-20");
                     if (lastremotechangedid==lastchangedid) {
                         $("#update_button").addClass("opacity-20");
+                        $("#update_text").text("No Update");
+                    } else {
+                        $("#update_text").text("Update");
                     }
                     $("#update_icon").removeClass("fa-spin");
                 }); 
@@ -52,6 +55,7 @@
 
             function update() {
                 if (lastremotechangedid!=lastchangedid) {
+                    $("#update_text").text("Updating...");
                     $("#update_icon").addClass("fa-spin");
                     $.getJSON('commands.php?cmd=update')
                     .done(function(data) {
@@ -193,7 +197,7 @@
             <button id="update_button" onclick="update()" class="rounded-md bg-yellow-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div id="update_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-refresh fa-spin"></div>
-                    <div class="h-1/5 <?=$textsize?>">Update</div>
+                    <div id="update_text" class="h-1/5 <?=$textsize?>">Checking...</div>
                 </div>
             </button>
             <button onclick="reboot()" class="rounded-md bg-yellow-300">
