@@ -6,7 +6,7 @@ var internet_connected=0;
 var installpath="";
 
 //only do the following, when in settings page
-if ($("#update_button".length)) {
+if ($("#update_button").length) {
     $.getJSON('commands.php?cmd=getvol')
     .done(function(data) {
         console.log(data.message + " - " + data.volume);
