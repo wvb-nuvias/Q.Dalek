@@ -4,8 +4,6 @@ var lastchangedid="";
 var lastremotechangedid="";
 var internet_connected=0;
 
-console.log("Is Internet Connected=" + internet_connected);
-
 $.getJSON('commands.php?cmd=getvol')
 .done(function(data) {
     console.log(data.message + " - " + data.volume);
@@ -23,6 +21,8 @@ $.getJSON('commands.php?cmd=getlastchangeid')
 .done(function(data) {
     console.log(data.message + " - " + data.lastid);                                
     lastchangedid=data.lastid;
+
+    console.log("Is Internet Connected=" + internet_connected);
 
     $("#update_button").removeClass("opacity-20");
     if (internet_connected) {
