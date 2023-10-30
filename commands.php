@@ -13,7 +13,7 @@ if (file_exists($configfile)) {
     //write config file defaults
 }
 
-$data=["configfile" => $configfile];
+$data=["configfile" => $configfile, "file exists" => file_exists($configfile)];
 
 switch($cmd) {
     case "reboot":        
