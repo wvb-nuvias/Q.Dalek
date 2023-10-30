@@ -44,7 +44,10 @@
     </head>
     <body style="font-family: tahoma; user-select: none">        
         <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
-            <button onclick="dome()" class="rounded-md bg-purple-300 row-span-4">
+            <div class="rounded-md bg-purple-300 col-span-4">
+                Main Menu
+            </div>
+            <button onclick="dome()" class="rounded-md bg-purple-300 row-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/dome_active.svg"></div>
                     <div class="<?=$textsize?>">Dome</div>
@@ -57,7 +60,7 @@
                 </div>
             </button>
 
-            <button onclick="middle()" class="rounded-md bg-blue-300 row-span-4">
+            <button onclick="middle()" class="rounded-md bg-blue-300 row-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/middle_active.svg"></div>
                     <div class="<?=$textsize?>">Middle</div>
@@ -70,7 +73,7 @@
                 </div>
             </button>
 
-            <button onclick="skirt()" class="rounded-md bg-green-300 row-span-4">
+            <button onclick="skirt()" class="rounded-md bg-green-300 row-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/skirt_active.svg"></div>
                     <div class="<?=$textsize?>">Skirt</div>
@@ -83,7 +86,7 @@
                 </div>
             </button>
 
-            <button onclick="fender()" class="rounded-md bg-pink-300 row-span-4">
+            <button onclick="fender()" class="rounded-md bg-pink-300 row-span-3">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div><img src="images/bottom_active.svg"></div>
                     <div class="<?=$textsize?>">Fender</div>
