@@ -22,7 +22,7 @@ $.getJSON('commands.php?cmd=getlastchangeid')
     console.log(data.message + " - " + data.lastid);                                
     lastchangedid=data.lastid;
 
-    console.log("Is Internet Connected=" + internet_connected);
+    //console.log("Is Internet Connected=" + internet_connected);
 
     $("#update_button").removeClass("opacity-20");
     if (internet_connected) {
