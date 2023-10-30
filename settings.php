@@ -13,6 +13,9 @@
             var lastchanged="";
             var lastchangedid="";
             var lastremotechangedid="";
+            var internet_connected=<?=$internet_connected?>;
+
+            console.log("Is Internet Connected=" + internet_connected);
 
             $.getJSON('commands.php?cmd=getvol')
             .done(function(data) {

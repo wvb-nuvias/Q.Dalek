@@ -29,4 +29,10 @@ $iconsize=$cfg["iconsize"];
 $textsize=$cfg["textsize"];
 $margin=$cfg["margin"];           
 $itemmargin=$cfg["itemmargin"];
+
+$internet_connected = @fsockopen("www.office.com", 443);                                         
+if ($internet_connected){
+    fclose($connected);
+}
+
 ?>
