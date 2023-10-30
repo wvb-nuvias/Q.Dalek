@@ -10,7 +10,18 @@ if (file_exists($configfile)) {
     $json = file_get_contents($configfile); 
     $cfg = json_decode($json,true);
 } else {
-    //write config file defaults
+    $cfg = [
+        "git_source" => "git@github.com:wvb-nuvias/Q.Dalek.git",
+        "installpath" => "/var/www/html/qdalek",
+        "speak_pitch" => "50",
+        "speak_modulate" => "35",
+        "speak_speed" => "150",
+        "speak_amplitude" => "250",
+        "speak_capitals" => "30",
+        "speak_wordsgap" => "6"
+    ];
+    $json = json_encode($cfg);
+    file_put_contents($configfile,$json);
 }
 
 $data=["configfile" => $configfile, "file exists" => file_exists($configfile)];
@@ -42,13 +53,13 @@ switch($cmd) {
         $data=["result" => "ok", "message" => "getting git change id...", "lastid" => $ret];
         break;
     case "getremotelastid":        
-        $ret=shell_Exec("sudo su wouter -c \"git ls-remote --heads git@github.com:wvb-nuvias/Q.Dalek.git\"");
+        $ret=shell_Exec("sudo su wouter -c \"git ls-remote --heads ".$cfg["git_source"]."\"");
         $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => $ret];
         break;
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);
-        $chkfile="/var/www/html/qdalek/speech/".$chk.".wav";
+        $chkfile=$cfg["installpath"]."/speech/".$chk.".wav";
         $retfile="speech/".$chk.".wav";
         
         if (!file_exists($chkfile)) {
