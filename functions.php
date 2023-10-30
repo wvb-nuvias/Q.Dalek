@@ -23,6 +23,6 @@ if (file_exists($configfile)) {
 
 $iconsize="text-8xl";
 $textsize="text-4xl";
-$margin="2";            
+$margin="4";            
 $itemmargin="1";
 ?>
