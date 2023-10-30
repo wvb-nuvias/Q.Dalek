@@ -65,6 +65,7 @@ switch($cmd) {
         if (!file_exists($chkfile)) {            
             $cmdline="speak \"".$text."\" -ven+m6 -p".$cfg["speak_pitch"]." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$cfg["speak_speed"]." -r".$cfg["speak_modulate"]." -a".$cfg["speak_amplitude"]." -w ".$chkfile;       
             shell_Exec($cmdline);
+            //TODO add sox echo ? -- sox original.wav new.wav echo 0.8 0.88 100.0 0.4
         }
         
         $data=["result" => "ok", "message" => "speaking...", "file" => $retfile];
