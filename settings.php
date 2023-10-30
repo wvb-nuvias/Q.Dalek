@@ -122,6 +122,10 @@
                 }
             }
 
+            function speechsettings() {
+                document.location.href="/settings/speech.php";
+            }
+
             function back() {
                 document.location.href="/index.php";
             }
@@ -156,10 +160,10 @@
                 </div>
             </button>
 
-            <button onclick="" class="rounded-md bg-green-400">
+            <button onclick="speechsettings()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                    <div class="h-1/5 <?=$textsize?>"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-comment-dots"></div>
+                    <div class="h-1/5 <?=$textsize?>">Speech Settings</div>
                 </div>
             </button>
             <button onclick="" class="rounded-md bg-green-300">

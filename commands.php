@@ -63,6 +63,7 @@ switch($cmd) {
         $retfile="speech/".$chk.".wav";
         
         if (!file_exists($chkfile)) {
+            //TODO use config file here, and add settings to change them
             $cmdline="speak \"".$text."\" -ven+m6 -g6 -k30 -s150 -r35 -a250 -w ".$chkfile;       
             shell_Exec($cmdline);
         }
