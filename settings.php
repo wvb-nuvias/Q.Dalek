@@ -162,8 +162,8 @@
 
             <button onclick="speechsettings()" class="rounded-md bg-green-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-comment-dots"></div>
-                    <div class="h-1/5 <?=$textsize?>">Speech Settings</div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-sliders"></div>
+                    <div class="h-1/5 <?=$textsize?>">Speech</div>
                 </div>
             </button>
             <button onclick="" class="rounded-md bg-green-300">
