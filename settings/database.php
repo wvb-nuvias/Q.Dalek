@@ -1,4 +1,4 @@
-<?php include "header.php";?>
+<?php include "../header.php";?>
 <div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-yellow-200 <?=$titlesize?> flex items-center justify-center h-24">
         Database Settings
@@ -81,4 +81,4 @@
         </button>
     </div>
 </div>
-<?php include "footer.php";?>
+<?php include "../footer.php";?>
