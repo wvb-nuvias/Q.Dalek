@@ -1,4 +1,7 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
+<?php
+    include "functions.php";
+?>
 <html>
     <head>
         <script src="https://kit.fontawesome.com/06b2b4d018.js" crossorigin="anonymous"></script>
@@ -26,11 +29,6 @@
             //TODO get the texts from the database, add way to add and delete
             //TODO way to do this realtime
             //TODO set pitch etc in settings
-
-            $iconsize="text-8xl";
-            $textsize="text-4xl";
-            $margin="2";            
-            $itemmargin="1";
         ?>
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">

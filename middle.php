@@ -1,4 +1,7 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
+<?php
+    include "functions.php";
+?>
 <html>
     <head>
         <script src="https://kit.fontawesome.com/06b2b4d018.js" crossorigin="anonymous"></script>
@@ -27,13 +30,7 @@
         </script>
     </head>
     <body style="font-family: tahoma; user-select: none">
-        <!-- TODO read volume setting on load of this page -->
-        <?php
-            $iconsize="text-8xl";
-            $textsize="text-4xl";
-            $margin="2";            
-            $itemmargin="1";
-        ?>
+        <!-- TODO read volume setting on load of this page -->       
 
         <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> w-screen h-screen p-<?=$margin?>">
             <button onclick="decreasevolume()" class="rounded-md bg-gray-400">
