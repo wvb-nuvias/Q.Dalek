@@ -156,7 +156,7 @@
                 Settings
             </div>
             <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> h-full">
-                <button id="increasevolume_button" onclick="increasevolume()" class="rounded-md bg-blue-400 row-span-2">
+                <button id="increasevolume_button" onclick="increasevolume()" class="rounded-md bg-blue-400">
                     <div class="flex flex-col gap-<?=$itemmargin?>">
                         <div class="h-4/5 <?=$iconsize?> fa-solid fa-volume-low"></div>
                         <div id="increasevolume_text" class="h-1/5 <?=$textsize?>">Volume +</div>
