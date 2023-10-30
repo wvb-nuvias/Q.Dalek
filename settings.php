@@ -9,6 +9,7 @@
             var volume=0;
             var lastchanged="";
             var lastchangedid="";
+            var lastremotechangedid="";
 
             $.getJSON('commands.php?cmd=getvol')
             .done(function(data) {
@@ -31,7 +32,12 @@
                 $.getJSON('commands.php?cmd=getremotelastid')
                 .done(function(data) {
                     console.log(data.message + " - " + data.lastid);                                
-                    //what to do when not equal to changeid
+                    lastremotechangedid=data.lastid;
+
+                    $("#update_button").removeClass("opacity-20");
+                    if (lastremotechangedid==lastchangedid) {
+                        $("#update_button").addClass("opacity-20");
+                    }
                 }); 
             });            
                                 
@@ -179,7 +185,7 @@
                 </div>
             </button>
             
-            <button onclick="update()" class="rounded-md bg-yellow-400">
+            <button id="update_button" onclick="update()" class="rounded-md bg-yellow-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
