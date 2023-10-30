@@ -15,7 +15,7 @@ if (file_exists($configfile)) {
         "installpath" => "/var/www/html/qdalek",
         "speak_pitch" => "50",
         "speak_modulate" => "35",
-        "speak_speed" => "150",
+        "speak_speed" => "250",
         "speak_amplitude" => "250",
         "speak_capitals" => "30",
         "speak_wordsgap" => "6"
