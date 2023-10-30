@@ -15,14 +15,18 @@ if (file_exists($configfile)) {
         "speak_speed" => "150",
         "speak_amplitude" => "250",
         "speak_capitals" => "30",
-        "speak_wordsgap" => "6"
+        "speak_wordsgap" => "6",
+        "iconsize" => "text-8xl",
+        "textsize" => "text-4xl",
+        "margin" => "2",
+        "itemmargin" => "1"
     ];
     $json = json_encode($cfg);
     file_put_contents($configfile,$json);
 }
 
-$iconsize="text-8xl";
-$textsize="text-4xl";
-$margin="4";            
-$itemmargin="1";
+$iconsize=$cfg["iconsize"];
+$textsize=$cfg["textsize"];
+$margin=$cfg["margin"];           
+$itemmargin=$cfg["itemmargin"];
 ?>
