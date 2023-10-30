@@ -43,11 +43,11 @@
         </script>
     </head>
     <body style="font-family: tahoma; user-select: none">        
-        <div class="flex w-screen h-screen p-<?=$margin?> flex-col">
+        <div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">
             <div class="rounded-md bg-purple-200 <?=$titlesize?> flex items-center justify-center h-24">
                 Main Menu
             </div>
-            <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?>">            
+            <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> h-full">            
                 <button onclick="dome()" class="rounded-md bg-purple-300 row-span-2">
                     <div class="flex flex-col gap-<?=$itemmargin?>">
                         <div><img src="images/dome_active.svg"></div>
