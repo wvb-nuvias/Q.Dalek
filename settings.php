@@ -125,8 +125,16 @@
                 }
             }
 
+            function generalsettings() {
+                document.location.href="/settings/general.php";
+            }
+
             function speechsettings() {
                 document.location.href="/settings/speech.php";
+            }
+
+            function databasesettings() {
+                document.location.href="/settings/database.php";
             }
 
             function back() {
@@ -155,22 +163,22 @@
                 </div>
             </button>
 
-            <button onclick="speechsettings()" class="rounded-md bg-green-400">
+            <button onclick="generalsettings()" class="rounded-md bg-green-400">
+                <div class="flex flex-col gap-<?=$itemmargin?>">
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-gear"></div>
+                    <div class="h-1/5 <?=$textsize?>">General</div>
+                </div>
+            </button>
+            <button onclick="speechsettings()" class="rounded-md bg-green-300">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
                     <div class="h-4/5 <?=$iconsize?> fa-solid fa-sliders"></div>
                     <div class="h-1/5 <?=$textsize?>">Speech</div>
                 </div>
             </button>
-            <button onclick="" class="rounded-md bg-green-300">
+            <button onclick="databasesettings()" class="rounded-md bg-green-200">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                    <div class="h-1/5 <?=$textsize?>"></div>
-                </div>
-            </button>
-            <button onclick="" class="rounded-md bg-green-200">
-                <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                    <div class="h-1/5 <?=$textsize?>"></div>
+                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-database"></div>
+                    <div class="h-1/5 <?=$textsize?>">Database</div>
                 </div>
             </button>
 
