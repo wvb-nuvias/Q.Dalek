@@ -30,9 +30,9 @@
                 lastchangedid=data.lastid;
 
                 $.getJSON('commands.php?cmd=getremotelastid')
-                .done(function(data) {
-                    console.log(data.message + " - " + data.lastid);                                
+                .done(function(data) {                    
                     lastremotechangedid=data.lastid.split(' ')[0];
+                    console.log(data.message + " - " + lastremotechangedid);                                
 
                     $("#update_button").removeClass("opacity-20");
                     if (lastremotechangedid==lastchangedid) {
