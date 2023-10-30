@@ -1,6 +1,5 @@
-<?php 
-    $path=dirname(realpath("commands.php"));
-    include $path."/header.php";
+<?php    
+    include "/header.php";
 ?>
 <div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-green-200 <?=$titlesize?> flex items-center justify-center h-24">
@@ -84,4 +83,4 @@
         </button>
     </div>
 </div>
-<?php include $path."/footer.php";?>
+<?php include "/footer.php";?>
