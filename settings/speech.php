@@ -4,12 +4,14 @@
         Speech Settings
     </div>
     <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> h-full">
-        <button onclick="" class="rounded-md bg-purple-400 col-span-4">
+        <div onclick="" class="rounded-md bg-purple-400 col-span-4">
+            <input id="minmax-range" type="range" min="0" max="30" value="5" class="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
-        </button>
+        </div>
         <button onclick="" class="rounded-md bg-purple-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
