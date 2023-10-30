@@ -25,6 +25,10 @@ switch($cmd) {
         $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%ci\" /home/wouter/source/repos/Q.Dalek\"");
         $data=["result" => "ok", "message" => "getting git change...", "lastchange" => $ret];
         break;
+    case "getlastchangeid":
+        $ret=shell_Exec("sudo su wouter -c \"git log -1 --pretty=\"format:%H\" /home/wouter/source/repos/Q.Dalek\"");
+        $data=["result" => "ok", "message" => "getting git change id...", "lastid" => $ret];
+        break;
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);

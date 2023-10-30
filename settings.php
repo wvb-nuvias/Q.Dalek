@@ -16,9 +16,12 @@
             
             $.getJSON('commands.php?cmd=getlastchange')
             .done(function(data) {
-                console.log(data.message + " - " + data.lastchange);
-                
-                //updatevolumetext();
+                console.log(data.message + " - " + data.lastchange);                                
+            }); 
+
+            $.getJSON('commands.php?cmd=getlastchangeid')
+            .done(function(data) {
+                console.log(data.message + " - " + data.lastid);                                
             }); 
                                 
             function reboot() {                
