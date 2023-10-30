@@ -39,6 +39,7 @@
                     if (lastremotechangedid==lastchangedid) {
                         $("#update_button").addClass("opacity-20");
                     }
+                    $("#update_icon").removeClass("fa-spin");
                 }); 
             });            
                                 
@@ -188,7 +189,7 @@
             
             <button id="update_button" onclick="update()" class="rounded-md bg-yellow-400">
                 <div class="flex flex-col gap-<?=$itemmargin?>">
-                    <div class="h-4/5 <?=$iconsize?> fa-solid fa-refresh"></div>
+                    <div id="update_icon" class="h-4/5 <?=$iconsize?> fa-solid fa-refresh fa-spin"></div>
                     <div class="h-1/5 <?=$textsize?>">Update</div>
                 </div>
             </button>
