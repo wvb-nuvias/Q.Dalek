@@ -27,13 +27,13 @@
             .done(function(data) {
                 console.log(data.message + " - " + data.lastid);                                
                 lastchangedid=data.lastid;
-            }); 
 
-            $.getJSON('commands.php?cmd=getremotelastid')
-            .done(function(data) {
-                console.log(data.message + " - " + data.lastid);                                
-                //lastchangedid=data.lastid;
-            }); 
+                $.getJSON('commands.php?cmd=getremotelastid')
+                .done(function(data) {
+                    console.log(data.message + " - " + data.lastid);                                
+                    //what to do when not equal to changeid
+                }); 
+            });            
                                 
             function reboot() {                
                 $.getJSON('commands.php?cmd=reboot')
