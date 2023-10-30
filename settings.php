@@ -35,21 +35,26 @@
                 console.log(data.message + " - " + data.lastid);                                
                 lastchangedid=data.lastid;
 
-                //TODO if no internet, do not allow updating.
-                $.getJSON('commands.php?cmd=getremotelastid')
-                .done(function(data) {                    
-                    lastremotechangedid=data.lastid;
-                    console.log(data.message + " - " + lastremotechangedid);                                
-
-                    $("#update_button").removeClass("opacity-20");
-                    if (lastremotechangedid==lastchangedid) {
-                        $("#update_button").addClass("opacity-20");
-                        $("#update_text").text("No Update");
-                    } else {
-                        $("#update_text").text("Update");
-                    }
+                $("#update_button").removeClass("opacity-20");
+                if (internet_connected) {
+                    $.getJSON('commands.php?cmd=getremotelastid')
+                    .done(function(data) {                    
+                        lastremotechangedid=data.lastid;
+                        console.log(data.message + " - " + lastremotechangedid);                                
+                        
+                        if (lastremotechangedid==lastchangedid) {
+                            $("#update_button").addClass("opacity-20");
+                            $("#update_text").text("No Update");
+                        } else {
+                            $("#update_text").text("Update");
+                        }
+                        $("#update_icon").removeClass("fa-spin");
+                    }); 
+                } else {
+                    $("#update_button").addClass("opacity-20");
+                    $("#update_text").text("No Internet!");
                     $("#update_icon").removeClass("fa-spin");
-                }); 
+                }
             });            
                                 
             function reboot() {                
