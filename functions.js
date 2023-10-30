@@ -6,50 +6,52 @@ var internet_connected=0;
 var installpath="";
 
 //only do the following, when in settings page
-if ($("#update_button").length) {
-    $.getJSON('commands.php?cmd=getvol')
-    .done(function(data) {
-        console.log(data.message + " - " + data.volume);
-        volume=parseInt(data.volume);
-        updatevolumetext();
-    });    
+$(document).ready(function () {
+    if ($("#update_button").length) {
+        $.getJSON('commands.php?cmd=getvol')
+        .done(function(data) {
+            console.log(data.message + " - " + data.volume);
+            volume=parseInt(data.volume);
+            updatevolumetext();
+        });    
 
-    $.getJSON('commands.php?cmd=getlastchange')
-    .done(function(data) {
-        console.log(data.message + " - " + data.lastchange);
-        lastchanged=data.lastchange;                               
-    }); 
+        $.getJSON('commands.php?cmd=getlastchange')
+        .done(function(data) {
+            console.log(data.message + " - " + data.lastchange);
+            lastchanged=data.lastchange;                               
+        }); 
 
-    $.getJSON('commands.php?cmd=getlastchangeid')
-    .done(function(data) {
-        console.log(data.message + " - " + data.lastid);                                
-        lastchangedid=data.lastid;
+        $.getJSON('commands.php?cmd=getlastchangeid')
+        .done(function(data) {
+            console.log(data.message + " - " + data.lastid);                                
+            lastchangedid=data.lastid;
 
-        //console.log("Is Internet Connected=" + internet_connected);
+            //console.log("Is Internet Connected=" + internet_connected);
 
-        $("#update_button").removeClass("opacity-20");
-        if (internet_connected) {
-            $.getJSON('commands.php?cmd=getremotelastid')
-            .done(function(data) {                    
-                lastremotechangedid=data.lastid;
-                console.log(data.message + " - " + lastremotechangedid);                                
-                
-                if (lastremotechangedid==lastchangedid) {
-                    $("#update_button").addClass("opacity-20");
-                    $("#update_text").text("No Update");
-                } else {
-                    $("#update_text").text("Update");
-                }
-                $("#update_icon").removeClass("fa-spin");
-            }); 
-        } else {
-            $("#update_button").addClass("opacity-20");
-            $("#update_text").text("No Internet!");
-            $("#update_icon").removeClass("fa-spin");
-        }
-    });            
-}
+            $("#update_button").removeClass("opacity-20");
+            if (internet_connected) {
+                $.getJSON('commands.php?cmd=getremotelastid')
+                .done(function(data) {                    
+                    lastremotechangedid=data.lastid;
+                    console.log(data.message + " - " + lastremotechangedid);                                
                     
+                    if (lastremotechangedid==lastchangedid) {
+                        $("#update_button").addClass("opacity-20");
+                        $("#update_text").text("No Update");
+                    } else {
+                        $("#update_text").text("Update");
+                    }
+                    $("#update_icon").removeClass("fa-spin");
+                }); 
+            } else {
+                $("#update_button").addClass("opacity-20");
+                $("#update_text").text("No Internet!");
+                $("#update_icon").removeClass("fa-spin");
+            }
+        });            
+    }
+});
+    
 function reboot() {                
     $.getJSON('commands.php?cmd=reboot')
     .done(function(data) {
