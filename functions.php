@@ -34,7 +34,7 @@ $itemmargin=$cfg["itemmargin"];
 
 $internet_test=@fsockopen("www.office.com", 443);
 if ($internet_test){
-    fclose($connected);
+    fclose($internet_test);
     $internet_connected=true;
 } else {
     $internet_connected=false;

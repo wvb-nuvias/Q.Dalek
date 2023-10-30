@@ -1,5 +1,6 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
+    $path=dirname(realpath("commands.php"));
     include $path."/functions.php";
 ?>
 <html>
