@@ -17,7 +17,7 @@
     </head>
     <body style="font-family: tahoma; user-select: none">
         <div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
-            <div class="rounded-md bg-purple-200 <?=$titlesize?> flex items-center justify-center h-24">
+            <div class="rounded-md bg-yellow-200 <?=$titlesize?> flex items-center justify-center h-24">
                 Database Settings
             </div>
             <div class="grid grid-flow-col grid-cols-4 grid-rows-3 gap-<?=$margin?> h-full">
