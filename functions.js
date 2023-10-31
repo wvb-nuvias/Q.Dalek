@@ -285,6 +285,9 @@ function speechsettings_updatechevrons() {
     $("#speechsetting_echo_down").removeClass("opacity-20");
     $("#speechsetting_capitals_down").removeClass("opacity-20");
     $("#speechsetting_wordsgap_down").removeClass("opacity-20");
+    $("#speechsetting_echo_up").removeClass("opacity-20");
+    $("#speechsetting_capitals_up").removeClass("opacity-20");
+    $("#speechsetting_wordsgap_up").removeClass("opacity-20");
 
     if (speak_pitch_test>=max_pitch) {
         $("#speechsetting_pitch_up").addClass("opacity-20");
@@ -332,7 +335,7 @@ function speechsettings_updatechevrons() {
     if (speak_capitals_test<=min_capitals) {
         $("#speechsetting_capitals_down").addClass("opacity-20");
     }
-    $("#speechsetting_capitals_text").text(speak_amplitude_test);
+    $("#speechsetting_capitals_text").text(speak_capitals_test);
 
     if (speak_wordsgap_test>=max_wordsgap) {
         $("#speechsetting_wordsgap_up").addClass("opacity-20");

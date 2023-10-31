@@ -19,6 +19,9 @@
         speak_modulate="<?=$speak_modulate?>";
         speak_speed="<?=$speak_speed?>";
         speak_amplitude="<?=$speak_amplitude?>";
+        speak_echo="<?=$speak_echo?>";
+        speak_capitals="<?=$speak_capitals?>";
+        speak_wordsgap="<?=$speak_wordsgap?>";
 
         console.log("Installed : "+installpath);
     </script>
