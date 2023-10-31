@@ -170,6 +170,7 @@ function speaktest() {
 }
 
 function up(settingtype) {
+    console.log("up pushed - " + settingtype);
     switch (settingtype) {
         case "pitch":
             if (speak_pitch_test<max_pitch) {
@@ -196,6 +197,7 @@ function up(settingtype) {
 }
 
 function down(settingtype) {
+    console.log("down pushed - " + settingtype);
     switch (settingtype) {
         case "pitch":
             if (speak_pitch_test>min_pitch) {
