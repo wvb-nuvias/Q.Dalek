@@ -40,7 +40,7 @@
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsize?> fa-solid fa-mound"></div>
                 <div class="<?=$textsize?> w-64">Pitch</div>            
-                <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-4">-</div>
                 <div class="<?=$textsize?> w-10">50</div>
             </div>
         </button>        
@@ -48,7 +48,7 @@
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsize?> fa-solid fa-blender"></div>
                 <div class="<?=$textsize?> w-64">Modulate</div>            
-                <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-4">-</div>
                 <div class="<?=$textsize?> w-10">35</div>
             </div>
         </button>
@@ -56,7 +56,7 @@
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsize?> fa-solid fa-gauge"></div>
                 <div class="<?=$textsize?> w-64">Speed</div>            
-                <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-4">-</div>
                 <div class="<?=$textsize?> w-10">150</div>
             </div>
         </button>        
@@ -64,7 +64,7 @@
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsize?> fa-solid fa-tornado"></div>
                 <div class="<?=$textsize?> w-64">Amplitude</div>            
-                <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-4">-</div>
                 <div class="<?=$textsize?> w-10">200</div>
             </div>
         </button>
