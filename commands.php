@@ -58,13 +58,11 @@ switch($cmd) {
         $chk=str_replace(" ","_",$text);
         $chkfile=$cfg["installpath"]."/speech/".$chk.".wav";
         $retfile="../speech/".$chk.".wav";
-        
-        //if (!file_exists($chkfile)) {            
-            $cmdline="speak \"".$text."\" -ven+m6 -p".$pitch." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$speed." -r".$modulate." -a".$amplitude." -w ".$chkfile;       
-            shell_Exec($cmdline);
-            //TODO add sox echo ? -- sox original.wav new.wav echo 0.8 0.88 100.0 0.4
-        //}
-        
+                
+        $cmdline="speak \"".$text."\" -ven+m6 -p".$pitch." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$speed." -r".$modulate." -a".$amplitude." -w ".$chkfile;       
+        shell_Exec($cmdline);
+        //TODO add sox echo ? -- sox original.wav new.wav echo 0.8 0.88 100.0 0.4
+                
         $data=["result" => "ok", "message" => "speaking...", "file" => $retfile];
         break;
 }
