@@ -20,6 +20,7 @@ var speak_pitch_test=0;
 var speak_modulate_test=0;
 var speak_speed_test=0;
 var speak_amplitude_test=0;
+var speechsettings_page=1;
 
 //only do the following, when in settings page
 $(document).ready(function () {
@@ -281,7 +282,23 @@ function speechsettings_save() {
 }
 
 function speechsettings_more() {
-    
+    if (speechsettings_page==1) {
+        $('.page2').each(function(i, obj) {
+            obj.removeClass('hidden');
+        });
+        $('.page1').each(function(i, obj) {
+            obj.addClass('hidden');
+        });
+        speechsettings_page=2;
+    } else {
+        $('.page1').each(function(i, obj) {
+            obj.removeClass('hidden');
+        });
+        $('.page2').each(function(i, obj) {
+            obj.addClass('hidden');
+        });
+        speechsettings_page=1;
+    }
 }
 
 function generalsettings() {

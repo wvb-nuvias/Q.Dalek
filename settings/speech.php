@@ -78,24 +78,24 @@
                 <div id="speechsetting_pitch_text" class="<?=$textsize?> w-20"><?=$speak_pitch?></div>
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page1">                
+        <button onclick="" class="rounded-md bg-green-300 col-span-2 page1">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsizesmall?> fa-solid fa-blender"></div>
                 <div class="<?=$textsize?> w-64">Modulate</div>            
                 <div class="<?=$textsize?> w-8">-</div>
                 <div id="speechsetting_modulate_text" class="<?=$textsize?> w-20"><?=$speak_modulate?></div>
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-green-400 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page1">                
+        <button onclick="" class="rounded-md bg-green-400 col-span-2 page1">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsizesmall?> fa-solid fa-gauge"></div>
                 <div class="<?=$textsize?> w-64">Speed</div>            
                 <div class="<?=$textsize?> w-8">-</div>
                 <div id="speechsetting_speed_text" class="<?=$textsize?> w-20"><?=$speak_speed?></div>
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page1">                
+        <button onclick="" class="rounded-md bg-green-300 col-span-2 page1">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsizesmall?> fa-solid fa-tornado"></div>
                 <div class="<?=$textsize?> w-64">Amplitude</div>            
                 <div class="<?=$textsize?> w-8">-</div>
