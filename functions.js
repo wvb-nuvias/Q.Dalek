@@ -283,19 +283,19 @@ function speechsettings_save() {
 
 function speechsettings_more() {
     if (speechsettings_page==1) {
-        $('.page2').each(function(i, obj) {
-            obj.removeClass('hidden');
+        $('.page2').each(function() {
+            $(this).removeClass('hidden');
         });
-        $('.page1').each(function(i, obj) {
-            obj.addClass('hidden');
+        $('.page1').each(function() {
+            $(this).addClass('hidden');
         });
         speechsettings_page=2;
     } else {
-        $('.page1').each(function(i, obj) {
-            obj.removeClass('hidden');
+        $('.page1').each(function() {
+            $(this).removeClass('hidden');
         });
-        $('.page2').each(function(i, obj) {
-            obj.addClass('hidden');
+        $('.page2').each(function() {
+            $(this).addClass('hidden');
         });
         speechsettings_page=1;
     }
