@@ -40,11 +40,17 @@ switch($cmd) {
         $modulate=$_REQUEST["modulate"];
         $speed=$_REQUEST["speed"];
         $amplitude=$_REQUEST["amplitude"];
+        $echo=$_REQUEST["echo"];
+        $capitals=$_REQUEST["capitals"];
+        $wordsgap=$_REQUEST["wordsgap"];
 
         $cfg["speak_pitch"]=$pitch;
         $cfg["speak_modulate"]=$modulate;
         $cfg["speak_speed"]=$speed;
         $cfg["speak_amplitude"]=$amplitude;
+        $cfg["speak_echo"]=$echo;
+        $cfg["speak_capitals"]=$capitals;
+        $cfg["speak_wordsgap"]=$wordsgap;
 
         $json=json_encode($cfg);
         file_put_contents($configfile,$json);
@@ -71,11 +77,15 @@ switch($cmd) {
         $modulate=$_REQUEST["modulate"];
         $speed=$_REQUEST["speed"];
         $amplitude=$_REQUEST["amplitude"];
+        $echo=$_REQUEST["echo"];
+        $wordsgap=$_REQUEST["wordsgap"];
+        $capitals=$_REQUEST["capitals"];
+
         $chk=str_replace(" ","_",$text);
         $chkfile=$cfg["installpath"]."/speech/".$chk.".wav";
         $retfile="../speech/".$chk.".wav";
                 
-        $cmdline="speak \"".$text."\" -ven+m6 -p".$pitch." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$speed." -r".$modulate." -a".$amplitude." -w ".$chkfile;       
+        $cmdline="speak \"".$text."\" -ven+m6 -p".$pitch." -g".$wordsgap." -k".$capitals." -s".$speed." -r".$modulate." -a".$amplitude." -w ".$chkfile;       
         shell_Exec($cmdline);
         //TODO add sox echo ? -- sox original.wav new.wav echo 0.8 0.88 100.0 0.4
                 

@@ -182,7 +182,7 @@ function getRandomInt(max) {
 
 function speaktest() {                
     document.getElementById("output").src='';
-    $.getJSON('../commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
+    $.getJSON('../commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test + '&echo=' + speak_echo_test + '&capitals=' + speak_capitals_test + '&wordsgap=' + speak_wordsgap_test)
     .done(function(data) {
         console.log(data.message); 
         console.log(data.file); 
