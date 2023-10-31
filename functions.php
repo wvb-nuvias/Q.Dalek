@@ -1,7 +1,7 @@
 <?php
 $path=dirname(realpath("commands.php"));
 
-$configfile = $path."/config.json";
+$configfile = "/var/www/html/qdalek/config.json";
 if (file_exists($configfile)) {
     $json = file_get_contents($configfile); 
     $cfg = json_decode($json,true);
@@ -17,26 +17,29 @@ if (file_exists($configfile)) {
         "speak_capitals" => "30",
         "speak_wordsgap" => "6",
         "iconsize" => "text-8xl",
+        "iconsizesmall" => "text-6xl",
         "textsize" => "text-4xl",
         "titlesize" => "text-5xl",
         "margin" => "2",
         "itemmargin" => "1"
     ];
-    $json = json_encode($cfg);
-    file_put_contents($configfile,$json);
 }
 
-$iconsize=$cfg["iconsize"];
-$iconsizesmall="text-6xl";
-$textsize=$cfg["textsize"];
-$titlesize=$cfg["titlesize"];
-$margin=$cfg["margin"];           
-$itemmargin=$cfg["itemmargin"];
+$git_source=$cfg["git_source"];
 $installpath=$cfg["installpath"];
+$masteruser=$cfg["masteruser"];
 $speak_pitch=$cfg["speak_pitch"];
 $speak_modulate=$cfg["speak_modulate"];
 $speak_speed=$cfg["speak_speed"];
 $speak_amplitude=$cfg["speak_amplitude"];
+$speak_capitals=$cfg["speak_capitals"];
+$speak_wordsgap=$cfg["speak_wordsgap"];
+$iconsize=$cfg["iconsize"];
+$iconsizesmall=$cfg["iconsizesmall"];
+$textsize=$cfg["textsize"];
+$titlesize=$cfg["titlesize"];
+$margin=$cfg["margin"];           
+$itemmargin=$cfg["itemmargin"];
 
 $internet_test=@fsockopen("www.office.com", 443);
 if ($internet_test){
