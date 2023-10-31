@@ -335,7 +335,7 @@ function speechsettings_updatechevrons() {
     $("#speechsetting_capitals_text").text(speak_amplitude_test);
 
     if (speak_wordsgap_test>=max_wordsgap) {
-        $("#speechsetting_wordgap_up").addClass("opacity-20");
+        $("#speechsetting_wordsgap_up").addClass("opacity-20");
     }
     if (speak_wordsgap_test<=min_wordsgap) {
         $("#speechsetting_wordsgap_down").addClass("opacity-20");
