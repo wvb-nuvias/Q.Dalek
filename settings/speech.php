@@ -12,25 +12,25 @@
     <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?> h-full">
         <button id="speechsetting_pitch_down" onclick="down('pitch')" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
         <button id="speechsetting_modulate_down" onclick="down('modulate')" class="rounded-md bg-purple-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
         <button id="speechsetting_speed_down" onclick="down('speed')" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
         <button id="speechsetting_amplitude_down" onclick="down('amplitude')" class="rounded-md bg-purple-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
@@ -92,25 +92,25 @@
         
         <button id="speechsetting_pitch_up" onclick="up('pitch')" class="rounded-md bg-blue-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-right"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>        
         <button id="speechsetting_modulate_up" onclick="up('modulate')" class="rounded-md bg-blue-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-right"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
         <button id="speechsetting_speed_up" onclick="up('speed')" class="rounded-md bg-blue-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-right"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>        
         <button id="speechsetting_amplitude_up" onclick="up('amplitude')" class="rounded-md bg-blue-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-right"></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
