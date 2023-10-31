@@ -27,6 +27,7 @@ if (file_exists($configfile)) {
 }
 
 $iconsize=$cfg["iconsize"];
+$iconsizesmall="text-6xl";
 $textsize=$cfg["textsize"];
 $titlesize=$cfg["titlesize"];
 $margin=$cfg["margin"];           
