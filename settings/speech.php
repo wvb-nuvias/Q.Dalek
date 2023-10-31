@@ -43,21 +43,21 @@
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
+                <div class="<?=$iconsize?> fa-solid fa-blender"></div>
+                <div class="<?=$textsize?>">Modulate</div>            
             </div>
         </button>
         <button onclick="" class="rounded-md bg-green-400 col-span-2">
-            <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
+                <div class="<?=$iconsize?> fa-solid fa-gauge"></div>
+                <div class="<?=$textsize?>">Speed</div>            
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
+                <div class="<?=$iconsize?> fa-solid fa-tornado"></div>
+                <div class="<?=$textsize?>">Amplitude</div>            
             </div>
         </button>
         <button onclick="" class="rounded-md bg-gray-200 row-span-2">
