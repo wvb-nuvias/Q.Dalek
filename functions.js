@@ -173,7 +173,9 @@ function up(settingtype) {
     console.log("up pushed - " + settingtype);
     switch (settingtype) {
         case "pitch":
+            alert(speak_pitch_test + '-' + max_pitch);
             if (speak_pitch_test<max_pitch) {
+                alert('jaja');
                 speak_pitch_test=speak_pitch_test+5;
             }
             break;
@@ -189,7 +191,7 @@ function up(settingtype) {
             break;
         case "amplitude":
             if (speak_amplitude_test<max_amplitude) {
-                speechsetting_amplitude_up=speechsetting_amplitude_up+5;
+                speak_amplitude_test=speak_amplitude_test+5;
             }
             break;
     }
@@ -216,7 +218,7 @@ function down(settingtype) {
             break;
         case "amplitude":
             if (speak_amplitude_test>min_amplitude) {
-                speechsetting_amplitude_up=speechsetting_amplitude_up-5;
+                speak_amplitude_test=speak_amplitude_test-5;
             }
             break;
     }
