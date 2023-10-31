@@ -36,7 +36,7 @@
         </button>
         <button onclick="" class="rounded-md bg-purple-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-recycle fa-repeat"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-repeat"></div>
                 <div class="h-1/5 <?=$textsize?>">More</div>
             </div>
         </button>
