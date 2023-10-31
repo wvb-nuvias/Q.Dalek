@@ -37,9 +37,11 @@
 
         
         <button onclick="" class="rounded-md bg-green-400 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?>">
-                <div class="<?=$iconsize?> fa-solid fa-mound"></div>
-                <div class="<?=$textsize?>">Pitch</div>
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
+                <div class="gap-4">
+                    <div class="<?=$iconsize?> fa-solid fa-mound"></div>
+                    <div class="<?=$textsize?>">Pitch</div>
+                </div>                
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
