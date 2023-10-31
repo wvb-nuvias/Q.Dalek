@@ -36,13 +36,13 @@
         </button>
         <button onclick="" class="rounded-md bg-purple-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid fa-recycle"></div>
-                <div class="h-1/5 <?=$textsize?>">Defaults</div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-recycle fa-repeat"></div>
+                <div class="h-1/5 <?=$textsize?>">More</div>
             </div>
         </button>
 
         
-        <button onclick="" class="rounded-md bg-green-400 col-span-2">
+        <button onclick="speechsettings_more()" class="rounded-md bg-green-400 col-span-2">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsizesmall?> fa-solid fa-mound"></div>
                 <div class="<?=$textsize?> w-64">Pitch</div>            
