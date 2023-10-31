@@ -16,15 +16,15 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-purple-400 fa-chevron-left">
+        <button onclick="" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-purple-300 fa-chevron-left">
+        <button onclick="" class="rounded-md bg-purple-300">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
