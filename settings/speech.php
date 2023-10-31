@@ -4,6 +4,7 @@
     speak_modulate_test=parseInt(speak_modulate);
     speak_speed_test=parseInt(speak_speed);
     speak_amplitude_test=parseInt(speak_amplitude);
+    
 </script>
 <div id="speechsettingspage" class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-blue-200 <?=$titlesize?> flex items-center justify-center h-24">
@@ -123,7 +124,7 @@
         <button onclick="" class="rounded-md bg-red-400 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
                 <div class="<?=$iconsizesmall?> fa-solid fa-font"></div>
-                <div class="<?=$textsize?> w-64">WordGap</div>            
+                <div class="<?=$textsize?> w-64">Capitals</div>            
                 <div class="<?=$textsize?> w-8">-</div>
                 <div id="speechsetting_capitals_text" class="<?=$textsize?> w-20"><?=$speak_capitals?></div>
             </div>

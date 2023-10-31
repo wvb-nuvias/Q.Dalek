@@ -16,6 +16,7 @@ if (file_exists($configfile)) {
         "speak_amplitude" => "200",
         "speak_capitals" => "30",
         "speak_wordsgap" => "6",
+        "speak_echo" => "0",
         "iconsize" => "text-8xl",
         "iconsizesmall" => "text-6xl",
         "textsize" => "text-4xl",
@@ -34,6 +35,7 @@ $speak_speed=$cfg["speak_speed"];
 $speak_amplitude=$cfg["speak_amplitude"];
 $speak_capitals=$cfg["speak_capitals"];
 $speak_wordsgap=$cfg["speak_wordsgap"];
+$speak_echo=$cfg["speak_echo"];
 $iconsize=$cfg["iconsize"];
 $iconsizesmall=$cfg["iconsizesmall"];
 $textsize=$cfg["textsize"];
