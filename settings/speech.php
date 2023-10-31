@@ -104,7 +104,7 @@
         </button>
 
         <!-- page2 column2 -->
-        <button onclick="" class="rounded-md bg-green-400 col-span-2 page2 hidden">
+        <button onclick="" class="rounded-md bg-red-400 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 <div class="<?=$iconsizesmall?> fa-solid fa-ear-listen"></div>
                 <div class="<?=$textsize?> w-64">Echo</div>            
@@ -112,17 +112,17 @@
                 <div id="speechsetting_echo_text" class="<?=$textsize?> w-20"><?=$speak_echo?></div>
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2 page2 hidden">
+        <button onclick="" class="rounded-md bg-red-300 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-green-400 col-span-2 page2 hidden">
+        <button onclick="" class="rounded-md bg-red-400 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
                 
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2 page2 hidden">
+        <button onclick="" class="rounded-md bg-red-300 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
                 
             </div>
