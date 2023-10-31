@@ -35,6 +35,22 @@ switch($cmd) {
         $dat=explode("\t",$ret);        
         $data=["result" => "ok", "message" => "getting git remote change id...", "lastid" => $dat[0]];
         break;
+    case "speechsettingssave":
+        $pitch=$_REQUEST["pitch"];
+        $modulate=$_REQUEST["modulate"];
+        $speed=$_REQUEST["speed"];
+        $amplitude=$_REQUEST["amplitude"];
+
+        $cfg["speak_pitch"]=$pitch;
+        $cfg["speak_modulate"]=$modulate;
+        $cfg["speak_speed"]=$speed;
+        $cfg["speak_amplitude"]=$amplitude;
+
+        $json=json_encode($cfg);
+        file_put_contents($configfile,$json);
+
+        $data=["result" => "ok", "message" => "Saved config file."];
+        break;
     case "speak": 
         $text=$_REQUEST["text"];
         $chk=str_replace(" ","_",$text);

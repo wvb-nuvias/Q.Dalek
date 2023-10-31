@@ -273,6 +273,13 @@ function speechsettings_updatechevrons() {
     $("#speechsetting_amplitude_text").text(speak_amplitude_test);
 }
 
+function speechsettings_save() {    
+    $.getJSON('../commands.php?cmd=speechsettingssave&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
+    .done(function(data) {
+        console.log(data.message);                  
+    });  
+}
+
 function generalsettings() {
     document.location.href="/settings/general.php";
 }

@@ -82,7 +82,7 @@
         </button>
 
         
-        <button onclick="" class="rounded-md bg-yellow-200 row-span-2">
+        <button onclick="speechsettings_save()" class="rounded-md bg-yellow-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid fa-sd-card"></div>
                 <div class="h-1/5 <?=$textsize?>">Save</div>
