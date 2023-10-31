@@ -169,13 +169,10 @@ function speaktest() {
     });                            
 }
 
-function up(settingtype) {
-    console.log("up pushed - " + settingtype);
+function up(settingtype) {    
     switch (settingtype) {
-        case "pitch":
-            alert(speak_pitch_test + '-' + max_pitch);
-            if (speak_pitch_test<max_pitch) {
-                alert('jaja');
+        case "pitch":            
+            if (speak_pitch_test<max_pitch) {                
                 speak_pitch_test=speak_pitch_test+5;
             }
             break;
@@ -198,8 +195,7 @@ function up(settingtype) {
     speechsettings_updatechevrons();
 }
 
-function down(settingtype) {
-    console.log("down pushed - " + settingtype);
+function down(settingtype) {    
     switch (settingtype) {
         case "pitch":
             if (speak_pitch_test>min_pitch) {
@@ -226,46 +222,46 @@ function down(settingtype) {
 }
 
 function speechsettings_updatechevrons() {
-    $("speechsetting_pitch_up").removeClass("opacity-20");
-    $("speechsetting_modulate_up").removeClass("opacity-20");
-    $("speechsetting_speed_up").removeClass("opacity-20");
-    $("speechsetting_amplitude_up").removeClass("opacity-20");
-    $("speechsetting_pitch_down").removeClass("opacity-20");
-    $("speechsetting_modulate_down").removeClass("opacity-20");
-    $("speechsetting_speed_down").removeClass("opacity-20");
-    $("speechsetting_amplitude_down").removeClass("opacity-20");
+    $("#speechsetting_pitch_up").removeClass("opacity-20");
+    $("#speechsetting_modulate_up").removeClass("opacity-20");
+    $("#speechsetting_speed_up").removeClass("opacity-20");
+    $("#speechsetting_amplitude_up").removeClass("opacity-20");
+    $("#speechsetting_pitch_down").removeClass("opacity-20");
+    $("#speechsetting_modulate_down").removeClass("opacity-20");
+    $("#speechsetting_speed_down").removeClass("opacity-20");
+    $("#speechsetting_amplitude_down").removeClass("opacity-20");
 
     if (speak_pitch_test>=max_pitch) {
-        $("speechsetting_pitch_up").addClass("opacity-20");
+        $("#speechsetting_pitch_up").addClass("opacity-20");
     }
     if (speak_pitch_test<=min_pitch) {
-        $("speechsetting_pitch_down").addClass("opacity-20");
+        $("#speechsetting_pitch_down").addClass("opacity-20");
     }
-    $("speechsetting_pitch_text").text(speak_pitch_test);
+    $("#speechsetting_pitch_text").text(speak_pitch_test);
 
     if (speak_modulate_test>=max_modulate) {
-        $("speechsetting_modulate_up").addClass("opacity-20");
+        $("#speechsetting_modulate_up").addClass("opacity-20");
     }
     if (speak_modulate_test<=min_modulate) {
-        $("speechsetting_modulate_down").addClass("opacity-20");
+        $("#speechsetting_modulate_down").addClass("opacity-20");
     }
-    $("speechsetting_modulate_text").text(speak_modulate_test);
+    $("#speechsetting_modulate_text").text(speak_modulate_test);
 
     if (speak_speed_test>=max_speed) {
-        $("speechsetting_speed_up").addClass("opacity-20");
+        $("#speechsetting_speed_up").addClass("opacity-20");
     }
     if (speak_speed_test<=min_speed) {
-        $("speechsetting_speed_down").addClass("opacity-20");
+        $("#speechsetting_speed_down").addClass("opacity-20");
     }
-    $("speechsetting_speed_text").text(speak_speed_test);
+    $("#speechsetting_speed_text").text(speak_speed_test);
 
     if (speak_amplitude_test>=max_amplitude) {
-        $("speechsetting_amplitude_up").addClass("opacity-20");
+        $("#speechsetting_amplitude_up").addClass("opacity-20");
     }
     if (speak_amplitude_test<=min_amplitude) {
-        $("speechsetting_amplitude_down").addClass("opacity-20");
+        $("#speechsetting_amplitude_down").addClass("opacity-20");
     }
-    $("speechsetting_amplitude_text").text(speak_amplitude_test);
+    $("#speechsetting_amplitude_text").text(speak_amplitude_test);
 }
 
 function generalsettings() {
