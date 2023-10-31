@@ -5,7 +5,7 @@
     speak_speed_test=parseInt(speak_speed);
     speak_amplitude_test=parseInt(speak_amplitude);
 </script>
-<div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
+<div id="speechsettingspage" class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-blue-200 <?=$titlesize?> flex items-center justify-center h-24">
         Speech Settings
     </div>

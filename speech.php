@@ -5,7 +5,7 @@
     //TODO set pitch etc in settings
 ?>
 
-<div class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
+<div id="speechpage" class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-blue-200 <?=$titlesize?> flex items-center justify-center h-24">
         Speech
     </div>

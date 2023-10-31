@@ -23,7 +23,7 @@ var speak_amplitude_test=0;
 
 //only do the following, when in settings page
 $(document).ready(function () {
-    if ($("#update_button").length) {
+    if ($("#settingspage").length) {
         $.getJSON('commands.php?cmd=getvol')
         .done(function(data) {
             console.log(data.message + " - " + data.volume);
@@ -65,6 +65,10 @@ $(document).ready(function () {
                 $("#update_icon").removeClass("fa-spin");
             }
         });            
+    }
+
+    if ($("#speechsettingspage").length) {
+        speechsettings_updatechevrons();
     }
 });
     
