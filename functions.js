@@ -160,7 +160,7 @@ function speak(text) {
 }
 
 function speaktest() {                
-    $.getJSON('commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
+    $.getJSON('../commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
     .done(function(data) {
         console.log(data.message); 
         console.log(data.file); 
