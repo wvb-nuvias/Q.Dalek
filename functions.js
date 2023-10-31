@@ -16,6 +16,10 @@ var max_pitch=99;
 var max_modulate=8000;
 var max_speed=450;
 var max_amplitude=200;
+var speak_pitch_test=0;
+var speak_modulate_test=0;
+var speak_speed_test=0;
+var speak_amplitude_test=0;
 
 //only do the following, when in settings page
 $(document).ready(function () {
@@ -156,13 +160,108 @@ function speak(text) {
 }
 
 function speaktest() {                
-    $.getJSON('commands.php?cmd=speaktest&pitch=' + speak_pitch + '&modulate=' + speak_modulate + '&speed='+ speak_speed + '&amplitude=' + speak_amplitude)
+    $.getJSON('commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
     .done(function(data) {
         console.log(data.message); 
         console.log(data.file); 
         document.getElementById("output").src=data.file;
         document.getElementById("output").play();                   
     });                            
+}
+
+function up(settingtype) {
+    switch (settingtype) {
+        case "pitch":
+            if (speak_pitch_test<max_pitch) {
+                speak_pitch_test=speak_pitch_test+5;
+            }
+            break;
+        case "modulate":
+            if (speak_modulate_test<max_modulate) {
+                speak_modulate_test=speak_modulate_test+5;
+            }
+            break;
+        case "speed":
+            if (speak_speed_test<max_speed) {
+                speak_speed_test=speak_speed_test+5;
+            }
+            break;
+        case "amplitude":
+            if (speak_amplitude_test<max_amplitude) {
+                speechsetting_amplitude_up=speechsetting_amplitude_up+5;
+            }
+            break;
+    }
+    speechsettings_updatechevrons();
+}
+
+function down(settingtype) {
+    switch (settingtype) {
+        case "pitch":
+            if (speak_pitch_test>min_pitch) {
+                speak_pitch_test=speak_pitch_test-5;
+            }
+            break;
+        case "modulate":
+            if (speak_modulate_test>min_modulate) {
+                speak_modulate_test=speak_modulate_test-5;
+            }
+            break;
+        case "speed":
+            if (speak_speed_test>min_speed) {
+                speak_speed_test=speak_speed_test-5;
+            }
+            break;
+        case "amplitude":
+            if (speak_amplitude_test>min_amplitude) {
+                speechsetting_amplitude_up=speechsetting_amplitude_up-5;
+            }
+            break;
+    }
+    speechsettings_updatechevrons();
+}
+
+function speechsettings_updatechevrons() {
+    $("speechsetting_pitch_up").removeClass("opacity-20");
+    $("speechsetting_modulate_up").removeClass("opacity-20");
+    $("speechsetting_speed_up").removeClass("opacity-20");
+    $("speechsetting_amplitude_up").removeClass("opacity-20");
+    $("speechsetting_pitch_down").removeClass("opacity-20");
+    $("speechsetting_modulate_down").removeClass("opacity-20");
+    $("speechsetting_speed_down").removeClass("opacity-20");
+    $("speechsetting_amplitude_down").removeClass("opacity-20");
+
+    if (speak_pitch_test>=max_pitch) {
+        $("speechsetting_pitch_up").addClass("opacity-20");
+    }
+    if (speak_pitch_test<=min_pitch) {
+        $("speechsetting_pitch_down").addClass("opacity-20");
+    }
+    $("speechsetting_pitch_text").text(speak_pitch_test);
+
+    if (speak_modulate_test>=max_modulate) {
+        $("speechsetting_modulate_up").addClass("opacity-20");
+    }
+    if (speak_modulate_test<=min_modulate) {
+        $("speechsetting_modulate_down").addClass("opacity-20");
+    }
+    $("speechsetting_modulate_text").text(speak_modulate_test);
+
+    if (speak_speed_test>=max_speed) {
+        $("speechsetting_speed_up").addClass("opacity-20");
+    }
+    if (speak_speed_test<=min_speed) {
+        $("speechsetting_speed_down").addClass("opacity-20");
+    }
+    $("speechsetting_speed_text").text(speak_speed_test);
+
+    if (speak_amplitude_test>=max_amplitude) {
+        $("speechsetting_amplitude_up").addClass("opacity-20");
+    }
+    if (speak_amplitude_test<=min_amplitude) {
+        $("speechsetting_amplitude_down").addClass("opacity-20");
+    }
+    $("speechsetting_amplitude_text").text(speak_amplitude_test);
 }
 
 function generalsettings() {
