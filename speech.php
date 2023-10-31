@@ -28,7 +28,7 @@
                 <div class="h-1/5 <?=$textsize?>">What is your purpose</div>
             </div>
         </button>
-        <button onclick="speak('Xteurminaite')" class="rounded-md bg-purple-200 col-span-3">
+        <button onclick="speak('Xturminaite')" class="rounded-md bg-purple-200 col-span-3">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div id="togglevolume_icon" class="h-4/5 <?=$iconsize?> fa-solid "></div>
                 <div class="h-1/5 <?=$textsize?>">Exterminate</div>
