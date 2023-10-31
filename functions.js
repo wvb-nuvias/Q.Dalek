@@ -159,6 +159,10 @@ function speak(text) {
     });                            
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 function speaktest() {                
     document.getElementById("output").src='';
     $.getJSON('../commands.php?cmd=speaktest&pitch=' + speak_pitch_test + '&modulate=' + speak_modulate_test + '&speed='+ speak_speed_test + '&amplitude=' + speak_amplitude_test)
