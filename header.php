@@ -15,6 +15,10 @@
     <script>
         internet_connected=<?=$internet_connected?>;
         installpath="<?=$installpath?>";
+        speak_pitch="<?=$speak_pitch?>";
+        speak_modulate="<?=$speak_modulate?>";
+        speak_speed="<?=$speak_speed?>";
+        speak_amplitude="<?=$speak_amplitude?>";
 
         console.log("Installed : "+installpath);
     </script>

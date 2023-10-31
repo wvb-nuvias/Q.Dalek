@@ -4,6 +4,18 @@ var lastchangedid="";
 var lastremotechangedid="";
 var internet_connected=0;
 var installpath="";
+var speak_pitch=0;
+var speak_modulate=0;
+var speak_speed=0;
+var speak_amplitude=0;
+var min_pitch=0;
+var min_modulate=0;
+var min_speed=80;
+var min_amplitude=0;
+var max_pitch=99;
+var max_modulate=8000;
+var max_speed=450;
+var max_amplitude=200;
 
 //only do the following, when in settings page
 $(document).ready(function () {
@@ -135,6 +147,16 @@ function play(sound) {
 
 function speak(text) {                
     $.getJSON('commands.php?cmd=speak&text=' + text)
+    .done(function(data) {
+        console.log(data.message); 
+        console.log(data.file); 
+        document.getElementById("output").src=data.file;
+        document.getElementById("output").play();                   
+    });                            
+}
+
+function speaktest() {                
+    $.getJSON('commands.php?cmd=speaktest&pitch=' + speak_pitch + '&modulate=' + speak_modulate + '&speed='+ speak_speed + '&amplitude=' + speak_amplitude)
     .done(function(data) {
         console.log(data.message); 
         console.log(data.file); 

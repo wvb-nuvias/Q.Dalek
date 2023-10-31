@@ -37,9 +37,9 @@
 
         
         <button onclick="" class="rounded-md bg-green-400 col-span-2">
-            <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+            <div class="flex flex-row gap-<?=$itemmargin?>">
+                <div class="<?=$iconsize?> fa-solid fa-mound"></div>
+                <div class="<?=$textsize?>">Pitch</div>
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
@@ -108,4 +108,9 @@
         </button>
     </div>
 </div>
+
+<audio id="output">
+    <source src="" type="audio/wav">
+</audio>
+
 <?php include "../footer.php";?>

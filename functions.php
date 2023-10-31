@@ -32,6 +32,10 @@ $titlesize=$cfg["titlesize"];
 $margin=$cfg["margin"];           
 $itemmargin=$cfg["itemmargin"];
 $installpath=$cfg["installpath"];
+$speak_pitch=$cfg["speak_pitch"];
+$speak_modulate=$cfg["speak_modulate"];
+$speak_speed=$cfg["speak_speed"];
+$speak_amplitude=$cfg["speak_amplitude"];
 
 $internet_test=@fsockopen("www.office.com", 443);
 if ($internet_test){
