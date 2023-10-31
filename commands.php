@@ -50,7 +50,7 @@ switch($cmd) {
         $data=["result" => "ok", "message" => "speaking...", "file" => $retfile];
         break;
     case "speaktest": 
-        $text="The Daleks are strong and Undefeated";
+        $text="The Dahlek Are Strong and Undefeated";
         $pitch=$_REQUEST["pitch"];
         $modulate=$_REQUEST["modulate"];
         $speed=$_REQUEST["speed"];
