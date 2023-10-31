@@ -41,6 +41,7 @@
                 <div class="<?=$iconsize?> fa-solid fa-mound"></div>
                 <div class="<?=$textsize?> w-64">Pitch</div>            
                 <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-10">50</div>
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
@@ -48,6 +49,7 @@
                 <div class="<?=$iconsize?> fa-solid fa-blender"></div>
                 <div class="<?=$textsize?> w-64">Modulate</div>            
                 <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-10">35</div>
             </div>
         </button>
         <button onclick="" class="rounded-md bg-green-400 col-span-2">
@@ -55,6 +57,7 @@
                 <div class="<?=$iconsize?> fa-solid fa-gauge"></div>
                 <div class="<?=$textsize?> w-64">Speed</div>            
                 <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-10">150</div>
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-green-300 col-span-2">
@@ -62,6 +65,7 @@
                 <div class="<?=$iconsize?> fa-solid fa-tornado"></div>
                 <div class="<?=$textsize?> w-64">Amplitude</div>            
                 <div class="<?=$textsize?> w-2.5">-</div>
+                <div class="<?=$textsize?> w-10">200</div>
             </div>
         </button>
         <button onclick="" class="rounded-md bg-gray-200 row-span-2">
