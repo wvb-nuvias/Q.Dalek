@@ -74,7 +74,7 @@
                 <div id="speechsetting_amplitude_text" class="<?=$textsize?> w-20"><?=$speak_amplitude?></div>
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-gray-200 row-span-2">
+        <button onclick="speaktest()" class="rounded-md bg-gray-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid fa-comment"></div>
                 <div class="h-1/5 <?=$textsize?>">Test</div>
