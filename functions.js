@@ -10,28 +10,28 @@ var speak_speed=0;
 var speak_amplitude=0;
 var speak_echo=0;
 var speak_capitals=0;
-var speak_wordgap=0;
+var speak_wordsgap=0;
 var min_pitch=0;
 var min_modulate=0;
 var min_speed=80;
 var min_amplitude=0;
 var min_echo=0;
 var min_capitals=0;
-var min_wordgap=0;
+var min_wordsgap=0;
 var max_pitch=99;
 var max_modulate=8000;
 var max_speed=450;
 var max_amplitude=200;
 var max_echo=100;
 var max_capitals=100;
-var max_wordgap=10;
+var max_wordsgap=10;
 var speak_pitch_test=0;
 var speak_modulate_test=0;
 var speak_speed_test=0;
 var speak_amplitude_test=0;
 var speak_echo_test=0;
 var speak_capitals_test=0;
-var speak_wordgap_test=0;
+var speak_wordsgap_test=0;
 var speechsettings_page=1;
 
 //only do the following, when in settings page
@@ -223,9 +223,9 @@ function up(settingtype) {
                 speak_capitals_test=speak_capitals_test+5;
             }
             break;
-        case "wordgap":
-            if (speak_wordgap_test<max_wordgap) {
-                speak_wordgap_test=speak_wordgap_test+5;
+        case "wordsgap":
+            if (speak_wordsgap_test<max_wordsgap) {
+                speak_wordsgap_test=speak_wordsgap_test+5;
             }
             break;
     }
@@ -260,13 +260,13 @@ function down(settingtype) {
             }
             break;
         case "capitals":
-            if (speak_capitals_tes>min_capitals) {
+            if (speak_capitals_test>min_capitals) {
                 speak_capitals_test=speak_capitals_test-5;
             }
             break;
-        case "wordgap":
-            if (speak_wordgap_test>min_wordgap) {
-                speak_wordgap_test=speak_wordgap_test-5;
+        case "wordsgap":
+            if (speak_wordsgap_test>min_wordsgap) {
+                speak_wordsgap_test=speak_wordsgap_test-5;
             }
             break;
     }
@@ -284,7 +284,7 @@ function speechsettings_updatechevrons() {
     $("#speechsetting_amplitude_down").removeClass("opacity-20");
     $("#speechsetting_echo_down").removeClass("opacity-20");
     $("#speechsetting_capitals_down").removeClass("opacity-20");
-    $("#speechsetting_wordgap_down").removeClass("opacity-20");
+    $("#speechsetting_wordsgap_down").removeClass("opacity-20");
 
     if (speak_pitch_test>=max_pitch) {
         $("#speechsetting_pitch_up").addClass("opacity-20");
@@ -334,13 +334,13 @@ function speechsettings_updatechevrons() {
     }
     $("#speechsetting_capitals_text").text(speak_amplitude_test);
 
-    if (speak_wordgap_test>=max_wordgap) {
+    if (speak_wordsgap_test>=max_wordsgap) {
         $("#speechsetting_wordgap_up").addClass("opacity-20");
     }
-    if (speak_wordgap_test<=min_wordgap) {
-        $("#speechsetting_wordgap_down").addClass("opacity-20");
+    if (speak_wordsgap_test<=min_wordsgap) {
+        $("#speechsetting_wordsgap_down").addClass("opacity-20");
     }
-    $("#speechsetting_wordgap_text").text(speak_wordgap_test);
+    $("#speechsetting_wordsgap_text").text(speak_wordsgap_test);
 }
 
 function speechsettings_save() {    

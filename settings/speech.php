@@ -4,7 +4,9 @@
     speak_modulate_test=parseInt(speak_modulate);
     speak_speed_test=parseInt(speak_speed);
     speak_amplitude_test=parseInt(speak_amplitude);
-    
+    speak_echo_test=parseInt(speak_echo);
+    speak_capitals_test=parseInt(speak_capitals);
+    speak_wordsgap_test=parseInt(speak_wordsgap);
 </script>
 <div id="speechsettingspage" class="flex w-screen h-screen p-<?=$margin?> flex-col gap-<?=$margin?>">     
     <div class="rounded-md bg-blue-200 <?=$titlesize?> flex items-center justify-center h-24">
@@ -43,7 +45,7 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button id="speechsetting_wordgap_down" onclick="down('wordgap')" class="rounded-md bg-purple-300 page2 hidden">
+        <button id="speechsetting_wordsgap_down" onclick="down('wordsgap')" class="rounded-md bg-purple-300 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
@@ -116,9 +118,9 @@
         <button onclick="" class="rounded-md bg-red-300 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">            
                 <div class="<?=$iconsizesmall?> fa-solid fa-arrows-left-right-to-line"></div>
-                <div class="<?=$textsize?> w-64">WordGap</div>            
+                <div class="<?=$textsize?> w-64">Words Gap</div>            
                 <div class="<?=$textsize?> w-8">-</div>
-                <div id="speechsetting_wordgap_text" class="<?=$textsize?> w-20"><?=$speak_wordsgap?></div>
+                <div id="speechsetting_wordsgap_text" class="<?=$textsize?> w-20"><?=$speak_wordsgap?></div>
             </div>
         </button>
         <button onclick="" class="rounded-md bg-red-400 col-span-2 page2 hidden">
@@ -184,7 +186,7 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>        
-        <button id="speechsetting_wordgap_up" onclick="up('wordgap')" class="rounded-md bg-blue-300 page2 hidden">
+        <button id="speechsetting_wordsgap_up" onclick="up('wordsgap')" class="rounded-md bg-blue-300 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
