@@ -9,7 +9,7 @@
     <div class="rounded-md bg-blue-200 <?=$titlesize?> flex items-center justify-center h-24">
         Speech Settings
     </div>
-    <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?>">
+    <div class="grid grid-flow-col grid-cols-4 grid-rows-6 gap-<?=$margin?> h-full">
         <button id="speechsetting_pitch_down" onclick="down('pitch')" class="rounded-md bg-purple-400">
             <div class="flex flex-col gap-<?=$itemmargin?>">
                 <div class="h-4/5 <?=$iconsize?> fa-solid fa-chevron-left"></div>
