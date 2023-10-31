@@ -112,18 +112,18 @@
                 <div id="speechsetting_echo_text" class="<?=$textsize?> w-20"><?=$speak_echo?></div>
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page2 hidden">                
+        <button onclick="" class="rounded-md bg-green-300 col-span-2 page2 hidden">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
                 
             </div>
         </button>
-        <button onclick="" class="rounded-md bg-green-400 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page2 hidden">                
+        <button onclick="" class="rounded-md bg-green-400 col-span-2 page2 hidden">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
                 
             </div>
         </button>        
-        <button onclick="" class="rounded-md bg-green-300 col-span-2">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center page2 hidden">                
+        <button onclick="" class="rounded-md bg-green-300 col-span-2 page2 hidden">
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
                 
             </div>
         </button>
