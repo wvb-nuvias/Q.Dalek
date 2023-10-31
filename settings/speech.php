@@ -30,8 +30,8 @@
         </button>
         <button onclick="" class="rounded-md bg-purple-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-recycle"></div>
+                <div class="h-1/5 <?=$textsize?>">Defaults</div>
             </div>
         </button>
 
@@ -62,16 +62,16 @@
         </button>
         <button onclick="" class="rounded-md bg-gray-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-comment"></div>
+                <div class="h-1/5 <?=$textsize?>">Test</div>
             </div>
         </button>
 
         
         <button onclick="" class="rounded-md bg-yellow-200 row-span-2">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsize?> fa-solid"></div>
-                <div class="h-1/5 <?=$textsize?>"></div>
+                <div class="h-4/5 <?=$iconsize?> fa-solid fa-sd-card"></div>
+                <div class="h-1/5 <?=$textsize?>">Save</div>
             </div>
         </button>
         
