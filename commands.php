@@ -57,7 +57,7 @@ switch($cmd) {
         $amplitude=$_REQUEST["amplitude"];
         $chk=str_replace(" ","_",$text);
         $chkfile=$cfg["installpath"]."/speech/".$chk.".wav";
-        $retfile="speech/".$chk.".wav";
+        $retfile="../speech/".$chk.".wav";
         
         if (!file_exists($chkfile)) {            
             $cmdline="speak \"".$text."\" -ven+m6 -p".$pitch." -g".$cfg["speak_wordsgap"]." -k".$cfg["speak_capitals"]." -s".$speed." -r".$modulate." -a".$amplitude." -w ".$chkfile;       
