@@ -42,15 +42,15 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button id="" onclick="" class="rounded-md bg-purple-300 page2 hidden">
+        <button id="speechsetting_wordgap_down" onclick="down('wordgap')" class="rounded-md bg-purple-300 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsizesmall?> fa-solid "></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button id="" onclick="" class="rounded-md bg-purple-400 page2 hidden">
+        <button id="speechsetting_capitals_down" onclick="down('capitals')" class="rounded-md bg-purple-400 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsizesmall?> fa-solid "></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-left"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
@@ -113,13 +113,19 @@
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-red-300 col-span-2 page2 hidden">
-            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">                
-                
+            <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">            
+                <div class="<?=$iconsizesmall?> fa-solid fa-arrows-left-right-to-line"></div>
+                <div class="<?=$textsize?> w-64">WordGap</div>            
+                <div class="<?=$textsize?> w-8">-</div>
+                <div id="speechsetting_wordgap_text" class="<?=$textsize?> w-20"><?=$speak_wordsgap?></div>
             </div>
         </button>
         <button onclick="" class="rounded-md bg-red-400 col-span-2 page2 hidden">
             <div class="flex flex-row gap-<?=$itemmargin?> items-center justify-center">
-                
+                <div class="<?=$iconsizesmall?> fa-solid fa-font"></div>
+                <div class="<?=$textsize?> w-64">WordGap</div>            
+                <div class="<?=$textsize?> w-8">-</div>
+                <div id="speechsetting_capitals_text" class="<?=$textsize?> w-20"><?=$speak_capitals?></div>
             </div>
         </button>        
         <button onclick="" class="rounded-md bg-red-300 col-span-2 page2 hidden">
@@ -177,15 +183,15 @@
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>        
-        <button id="" onclick="" class="rounded-md bg-blue-300 page2 hidden">
+        <button id="speechsetting_wordgap_up" onclick="up('wordgap')" class="rounded-md bg-blue-300 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsizesmall?> fa-solid "></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>
-        <button id="" onclick="" class="rounded-md bg-blue-400 page2 hidden">
+        <button id="speechsetting_capitals_up" onclick="up('capitals')" class="rounded-md bg-blue-400 page2 hidden">
             <div class="flex flex-col gap-<?=$itemmargin?>">
-                <div class="h-4/5 <?=$iconsizesmall?> fa-solid "></div>
+                <div class="h-4/5 <?=$iconsizesmall?> fa-solid fa-chevron-right"></div>
                 <div class="h-1/5 <?=$textsize?>"></div>
             </div>
         </button>        

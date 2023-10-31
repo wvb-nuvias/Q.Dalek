@@ -1,25 +1,27 @@
-const int ledstripRedPIN = 3;
-const int ledstripGreenPIN = 6;
-const int ledstripBluePIN = 5;
-int ledstripRedValue = 0;
-int ledstripGreenValue = 0;
-int ledstripBlueValue = 0;
-int ledstripRedCurrentValue = 0;
-int ledstripGreenCurrentValue = 0;
-int ledstripBlueCurrentValue = 0;
-int ledstripDelay = 4;
-int ledstripBlinkDelay = 4;
-bool ledstripEnabled = false;
+const int LEDPIN1_LEFTLIGHT = 3;
+const int LEDPIN2_LEFTLIGHT = 6;
+const int LEDPIN3_LEFTLIGHT = 5;
+
+const int LEDPIN1_RIGHTLIGHT = 11;
+const int LEDPIN2_RIGHTLIGHT = 9;
+const int LEDPIN3_RIGHTLIGHT = 10;
 
 int incomingByte = 0; 
 unsigned long previousMillis = 0;
 unsigned long previousLedstripMillis = 0;
 unsigned long currentMillis = 0; 
 
+bool leftlight_enabled = false;
+bool rightlight_enabled = false;
+
 void setup() {
-  analogWrite(ledstripRedPIN, 0);      
-  analogWrite(ledstripGreenPIN, 0);
-  analogWrite(ledstripBluePIN, 0);
+  analogWrite(LEDPIN1_LEFTLIGHT, 0);      
+  analogWrite(LEDPIN2_LEFTLIGHT, 0);
+  analogWrite(LEDPIN3_LEFTLIGHT, 0);
+
+  analogWrite(LEDPIN1_RIGHTLIGHT, 0);      
+  analogWrite(LEDPIN2_RIGHTLIGHT, 0);
+  analogWrite(LEDPIN3_RIGHTLIGHT, 0);
       
   Serial.begin(9600); 
   
@@ -37,46 +39,34 @@ void loop() {
 
     switch (incomingByte) {
       case 'l':
-        if (ledstripEnabled) {
-          ledstripEnabled=false;
-          analogWrite(ledstripRedPIN, 0);      
-          analogWrite(ledstripGreenPIN, 0);
-          analogWrite(ledstripBluePIN, 0);
-          Serial.println("{success: true, message: 'LED Strip disabled.'}");          
+        if (leftlight_enabled) {
+          leftlight_enabled=false;
+          analogWrite(LEDPIN1_LEFTLIGHT, 0);      
+          analogWrite(LEDPIN2_LEFTLIGHT, 0);
+          analogWrite(LEDPIN3_LEFTLIGHT, 0);
+          Serial.println("{success: true, message: 'Left Light disabled.'}");          
         } else {
-          ledstripEnabled=true;
-          analogWrite(ledstripRedPIN, 255);      
-          analogWrite(ledstripGreenPIN, 255);
-          analogWrite(ledstripBluePIN, 255);
-          Serial.println("{success: true, message: 'LED Strip enabled.'}");          
+          leftlight_enabled=true;
+          analogWrite(LEDPIN1_LEFTLIGHT, 1);      
+          analogWrite(LEDPIN2_LEFTLIGHT, 1);
+          analogWrite(LEDPIN3_LEFTLIGHT, 1);
+          Serial.println("{success: true, message: 'Left Light enabled.'}");          
         }
         break;
       case 'r':
-        if (ledstripRedValue==255) {
-          ledstripRedValue=0;  
-          Serial.println("{success: true, message: 'LED Strip RED to 0.'}");          
+        if (rightlight_enabled) {
+          rightlight_enabled=false;
+          analogWrite(LEDPIN1_RIGHTLIGHT, 0);      
+          analogWrite(LEDPIN2_RIGHTLIGHT, 0);
+          analogWrite(LEDPIN3_RIGHTLIGHT, 0);
+          Serial.println("{success: true, message: 'Right Light disabled.'}");          
         } else {
-          ledstripRedValue=255;
-          Serial.println("{success: true, message: 'LED Strip RED to 255.'}");          
+          rightlight_enabled=true;
+          analogWrite(LEDPIN1_RIGHTLIGHT, 1);      
+          analogWrite(LEDPIN2_RIGHTLIGHT, 1);
+          analogWrite(LEDPIN3_RIGHTLIGHT, 1);
+          Serial.println("{success: true, message: 'Right Light enabled.'}");          
         }
-        break;
-      case 'g':
-        if (ledstripGreenValue==255) {
-          ledstripGreenValue=0;  
-          Serial.println("{success: true, message: 'LED Strip GREEN to 0.'}");          
-        } else {
-          ledstripGreenValue=255;  
-          Serial.println("{success: true, message: 'LED Strip GREEN to 255.'}");          
-        }        
-        break;
-      case 'b':
-        if (ledstripBlueValue==255) {
-          ledstripBlueValue=0; 
-          Serial.println("{success: true, message: 'LED Strip BLUE to 0.'}");          
-        } else {
-          ledstripBlueValue=255;  
-          Serial.println("{success: true, message: 'LED Strip BLUE to 255.'}");          
-        }           
         break;
     }
   }
