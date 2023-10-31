@@ -280,6 +280,10 @@ function speechsettings_save() {
     });  
 }
 
+function speechsettings_more() {
+    
+}
+
 function generalsettings() {
     document.location.href="/settings/general.php";
 }
