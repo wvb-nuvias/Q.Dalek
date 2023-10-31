@@ -165,7 +165,7 @@ function speaktest() {
     .done(function(data) {
         console.log(data.message); 
         console.log(data.file); 
-        document.getElementById("output").src=data.file;
+        document.getElementById("output").src=data.file +'?'+getRandomInt(9999999999999999999999);
         document.getElementById("output").play();                   
     });                            
 }
