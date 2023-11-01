@@ -225,7 +225,7 @@ function up(settingtype) {
             break;
         case "wordsgap":
             if (speak_wordsgap_test<max_wordsgap) {
-                speak_wordsgap_test=speak_wordsgap_test+5;
+                speak_wordsgap_test=speak_wordsgap_test+1;
             }
             break;
     }
@@ -266,7 +266,7 @@ function down(settingtype) {
             break;
         case "wordsgap":
             if (speak_wordsgap_test>min_wordsgap) {
-                speak_wordsgap_test=speak_wordsgap_test-5;
+                speak_wordsgap_test=speak_wordsgap_test-1;
             }
             break;
     }
