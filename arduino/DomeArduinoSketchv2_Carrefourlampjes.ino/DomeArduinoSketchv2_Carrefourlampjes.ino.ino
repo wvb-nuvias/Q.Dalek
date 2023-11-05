@@ -1,6 +1,8 @@
 const int DOMELIGHT = 6;
 
+int incomingAudio;
 int incomingByte = 0; 
+
 unsigned long previousMillis = 0;
 unsigned long previousLedstripMillis = 0;
 unsigned long currentMillis = 0; 
@@ -21,6 +23,7 @@ void setup() {
 
 void loop() {    
   currentMillis = millis();
+  incomingAudio = analogRead(A0);
   
   if (Serial.available() > 0) {    
     incomingByte = Serial.read();
@@ -39,4 +42,6 @@ void loop() {
         break;     
     }
   }
+
+  Serial.println(incomingAudio);
 }
